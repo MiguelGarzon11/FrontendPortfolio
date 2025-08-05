@@ -70,12 +70,6 @@
   }
 }
 
-@layer utilities {
-  .clip-polygon {
-    clip-path: polygon(19% 65%, 54% 57%, 86% 37%, 82% 75%, 48% 94%);
-  }
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
