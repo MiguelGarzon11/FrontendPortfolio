@@ -50,7 +50,9 @@ export class Contactme {
       message: this.message
     };
 
-    this.http.post('https://portfolio-three-puce-96.vercel.app/api/sendEmail', payload).subscribe({
+    console.log('Enviando payload', payload);
+
+    this.http.post('https://localhost:3000/contactme', payload).subscribe({
       next: (res: any) => {
         alert('Correo enviado con éxito');
       },
@@ -60,5 +62,20 @@ export class Contactme {
         alert('Error al enviar el correo: ' + error.error.message);
       }
     });
+  }
+
+  onEnter(event: any) {
+
+    const keyboardEvent = event as KeyboardEvent;
+
+    if (!event.shiftKey) {
+      event.preventDefault();
+
+      if (this.selectedPlatform === 'whatsapp') {
+        this.sendWhatsApp();
+      } else {
+        this.sendEmail();
+      }
+    }
   }
 }

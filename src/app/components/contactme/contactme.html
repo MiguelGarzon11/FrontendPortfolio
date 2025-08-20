@@ -1,82 +1,79 @@
 <div class="h-full">
-    <div class="flex flex-col justify-center items-center gap-10 m-10">
+  <div class="flex flex-col justify-center items-center gap-10 m-10">
 
-        <h1 class="text-3xl text-main dark:text-secondary">Contact Me</h1>
+    <h1 class="text-3xl text-main dark:text-secondary">Contact Me</h1>
 
-        <div class="flex flex-col mb-10 shadow-md shadow-main dark:shadow-button rounded-t-2xl rounded-b-xl">
+    <div class="flex flex-col mb-10 shadow-md shadow-main dark:shadow-button rounded-t-2xl rounded-b-xl">
 
-            <div
-                class="flex gap-24 justify-start items-center h-[35px] w-[550Spx] bg-main dark:bg-secondary rounded-t-2xl">
+      <div class="flex gap-24 justify-start items-center h-[35px] w-[550Spx] bg-main dark:bg-secondary rounded-t-2xl">
 
-                <div class="flex gap-2 mx-3">
+        <div class="flex gap-2 mx-3">
 
-                    <div class="bg-red-500 h-3.5 w-3.5 rounded-full"></div>
-                    <div class="bg-yellow-400 h-3.5 w-3.5 rounded-full"></div>
-                    <div class="bg-green-500 h-3.5 w-3.5 rounded-full"></div>
-                </div>
-
-                <div class="flex text-nowrap">
-                    <h1 class="text-secondary dark:text-main">Let's work together</h1>
-                </div>
-
-                <div class="w-[70px]"></div>
-            </div>
-
-            <div class="flex flex-col justify-around h-[600px] w-[550px] bg-buttonS dark:bg-button rounded-b-xl">
-
-                <div class="flex flex-col justify-center items-center m-3 gap-5">
-                    <label class="justify-center text-white dark:text-black font-semibold text-xl" for="message">
-                        <h3 class="font-medium mb-3">
-                            {{ selectedPlatform === 'email' ? 'Send email' : 'Send WhatsApp' }}
-                        </h3>
-                    </label>
-
-                    <div *ngIf="selectedPlatform === 'email'">
-                        <input type="email" [(ngModel)]="email" name="email" placeholder="Your email" required>
-                    </div>
-
-                    <div *ngIf="selectedPlatform === 'email'">
-                        <input type="text" [(ngModel)]="subject" name="subject" placeholder="Subject" maxlength="50"
-                            required>
-                    </div>
-
-
-                    <textarea name="message" [(ngModel)]="message"
-                        [placeholder]="selectedPlatform === 'email' ? 'Send me an email to contact me' : 'Type your WhatsApp message here'"></textarea>
-
-                    <h3 class="font-extralight text-white dark:text-black">Select Opcion</h3>
-
-                    <div class="flex flex-row gap-5 justify-center items-center">
-
-                        <svg id="sendmessage" class="h-10 w-10 drop-shadow-lg cursor-pointer"
-                            (click)="setPlatform('email')">
-                            <use href="assets/icons/gmail.svg"></use>
-                        </svg>
-
-                        <svg id="sendmessage" class="h-10 w-10 drop-shadow-lg cursor-pointer"
-                            (click)="setPlatform('whatsapp')">
-                            <use href="assets/icons/wh.svg"></use>
-                        </svg>
-
-                        <a href="https://github.com/MiguelGarzon11" target="_blank">
-                            <svg id="sendmessage2" class="h-10 w-10 drop-shadow-lg cursor-pointer">
-                                <use href=" assets/icons/github.svg"></use>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/miguelangelgarz%C3%B3n/" target="_blank">
-                            <svg id="sendmessage" class="h-11 w-11 drop-shadow-lg cursor-pointer">
-                                <use href=" assets/icons/in.svg"></use>
-                            </svg>
-                        </a>
-
-                    </div>
-
-                    <button id="button" (click)="selectedPlatform === 'whatsapp' ? sendWhatsApp() : sendEmail() ">{{
-                        selectedPlatform === 'email' ? 'Send Email' : 'Send WhatsApp' }}
-                    </button>
-                </div>
-            </div>
+          <div class="bg-red-500 h-3.5 w-3.5 rounded-full"></div>
+          <div class="bg-yellow-400 h-3.5 w-3.5 rounded-full"></div>
+          <div class="bg-green-500 h-3.5 w-3.5 rounded-full"></div>
         </div>
 
+        <div class="flex text-nowrap">
+          <h1 class="text-secondary dark:text-main">Let's work together</h1>
+        </div>
+
+        <div class="w-[70px]"></div>
+      </div>
+
+      <div class="flex flex-col justify-around h-[600px] w-[550px] bg-buttonS dark:bg-button rounded-b-xl">
+
+        <div class="flex flex-col justify-center items-center m-3 gap-5">
+          <label class="justify-center text-white dark:text-black font-semibold text-xl" for="message">
+            <h3 class="font-medium mb-3">
+              {{ selectedPlatform === 'email' ? 'Send email' : 'Send WhatsApp' }}
+            </h3>
+          </label>
+
+          @if (selectedPlatform === 'email') {
+          <input type="email" [(ngModel)]="email" name="email" placeholder="Your email" required>
+          }
+
+          @if (selectedPlatform === 'email') {
+          <input type="text" [(ngModel)]="subject" name="subject" placeholder="Subject" maxlength="50" required>
+          }
+
+
+
+          <textarea name="message" [(ngModel)]="message" (keydown.enter)="onEnter($event)"
+            [placeholder]="selectedPlatform === 'email' ? 'Send me an email to contact me' : 'Type your WhatsApp message here'"></textarea>
+
+          <h3 class="font-extralight text-white dark:text-black">Select Opcion</h3>
+
+          <div class="flex flex-row gap-5 justify-center items-center">
+
+            <svg id="sendmessage" class="h-10 w-10 drop-shadow-lg cursor-pointer" (click)="setPlatform('email')">
+              <use href="assets/icons/gmail.svg"></use>
+            </svg>
+
+            <svg id="sendmessage" class="h-10 w-10 drop-shadow-lg cursor-pointer" (click)="setPlatform('whatsapp')">
+              <use href="assets/icons/wh.svg"></use>
+            </svg>
+
+            <a href="https://github.com/MiguelGarzon11" target="_blank">
+              <svg id="sendmessage2" class="h-10 w-10 drop-shadow-lg cursor-pointer">
+                <use href=" assets/icons/github.svg"></use>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/miguelangelgarz%C3%B3n/" target="_blank">
+              <svg id="sendmessage" class="h-11 w-11 drop-shadow-lg cursor-pointer">
+                <use href=" assets/icons/in.svg"></use>
+              </svg>
+            </a>
+
+          </div>
+
+          <button id="button" (click)="selectedPlatform === 'whatsapp' ? sendWhatsApp() : sendEmail() ">{{
+            selectedPlatform === 'email' ? 'Send Email' : 'Send WhatsApp' }}
+          </button>
+        </div>
+      </div>
     </div>
+
+  </div>
 </div>
