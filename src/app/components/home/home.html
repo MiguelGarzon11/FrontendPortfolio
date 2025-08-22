@@ -1,15 +1,15 @@
 <body>
-  <div id="home" class="flex flex-row justify-center gap-16 mt-8">
+  <div id="home" class="flex flex-col sm:flex-row justify-center gap-3 lg:gap-16">
 
-    <div class="flex flex-col justify-around items-end mt-20 text-main dark:text-secondary">
-      <svg class="w-96 h-96">
+    <div class="flex flex-col justify-center items-center mt-0 lg:mt-20 text-main dark:text-secondary">
+      <svg class="w-64 h-64 md:w-64 md:h-64 lg:w-96 lg:h-96">
         <use href="assets/figura.svg"></use>
       </svg>
     </div>
 
     <div class="flex flex-col drop-shadow-black dark:drop-shadow-white">
       <div
-        class="flex justify-center items-center lg:h-[35px] lg:w-[550px] bg-main dark:bg-secondary mt-28 rounded-t-2xl">
+        class="flex justify-center items-center lg:h-[35px] lg:w-[550px] bg-main dark:bg-secondary md:mt-28 rounded-t-2xl">
         <div class="flex flex-row gap-2 mx-3">
           <div class="bg-red-500 h-3.5 w-3.5 rounded-full"></div>
           <div class="bg-yellow-400 h-3.5 w-3.5 rounded-full"></div>
@@ -30,10 +30,10 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row justify-around my-24 mx-20">
+  <div class="flex flex-col md:flex-row justify-center gap-10 md:justify-around my-24 mx-10 md:mx-20">
     <div class="flex flex-col items-start justify-start w-96 gap-3">
       <h1 class="font-sans text-3xl">Full-stack Developer</h1>
-      <p class="flex flex-row text-wrap justify-start text-xl font-extralight">Hi, I'm Miguel Ángel — a Full Stack
+      <p class="flex flex-row text-wrap justify-start text-sm md:text-xl font-extralight">Hi, I'm Miguel Ángel — a Full Stack
         developer in training with hands-on experience in Angular, Tailwind, React, JavaScript, TypeScript,
         Python, SQL, Git, Docker, HTML, and CSS. I specialize in web development and building functional,
         user-focused applications.
