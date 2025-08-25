@@ -38,7 +38,7 @@
   }
 
   footer {
-    @apply h-40 flex flex-row justify-between mx-28 mt-3;
+    @apply h-40 flex flex-row justify-between;
   }
 
   button {

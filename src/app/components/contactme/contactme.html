@@ -1,4 +1,4 @@
-<div class="h-screen p-10">
+<div class="h-full">
   <div class="flex flex-col justify-center items-center gap-10 m-10">
 
     <h1 class="text-3xl text-main dark:text-secondary">Contact Me</h1>
@@ -51,7 +51,8 @@
               <use href="assets/icons/gmail.svg"></use>
             </svg>
 
-            <svg id="sendmessage" class="h-10 w-10 drop-shadow-lg cursor-pointer" (click)="setPlatform('whatsapp')">
+            <svg id="sendmessage" class="h-10 w-10 drop-shadow-lg cursor-pointer"
+              (click)="selectedPlatform ===('whatsapp')">
               <use href="assets/icons/wh.svg"></use>
             </svg>
 
@@ -74,6 +75,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
-<footer></footer>
