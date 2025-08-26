@@ -1,11 +1,12 @@
 <div class="h-full">
-  <div class="flex flex-col justify-center items-center gap-10 m-10">
+  <div class="flex flex-col justify-center items-center gap-10 m-12">
 
     <h1 class="text-3xl text-main dark:text-secondary">Contact Me</h1>
 
-    <div class="flex flex-col mb-10 shadow-md shadow-main dark:shadow-button rounded-t-2xl rounded-b-xl">
+    <div class="flex flex-col justify-center items-center mb-12 rounded-t-2xl rounded-b-xl">
 
-      <div class="flex justify-between items-center h-[35px] w-[550Spx] bg-main dark:bg-secondary rounded-t-2xl">
+      <div
+        class="flex justify-between items-center h-[25px] w-[340px] sm:h-[35px] sm:w-[550px] bg-main dark:bg-secondary rounded-t-2xl shadow-md shadow-main dark:shadow-button">
 
         <div class="flex gap-2 mx-3">
 
@@ -21,10 +22,11 @@
         <div class="w-[70px]"></div>
       </div>
 
-      <div class="flex flex-col justify-around h-[600px] w-[550px] bg-buttonS dark:bg-button rounded-b-xl">
+      <div
+        class="flex flex-col justify-around h-[460px] w-[340px] sm:h-[600px] sm:w-[550px] bg-buttonS dark:bg-button rounded-b-xl shadow-sm shadow-main dark:shadow-secondary">
 
-        <div class="flex flex-col justify-center items-center m-3 gap-5">
-          <label class="justify-center text-white dark:text-black font-semibold text-xl" for="message">
+        <div class="flex flex-col justify-center items-center mt-3 sm:m-3 gap-3 sm:gap-5">
+          <label class="justify-center text-white dark:text-black font-semibold text-md sm:text-xl" for="message">
             <h3 class="font-medium mb-3">
               {{ selectedPlatform === 'email' ? 'Send email' : 'Send WhatsApp' }}
             </h3>
@@ -37,8 +39,6 @@
           @if (selectedPlatform === 'email') {
           <input type="text" [(ngModel)]="subject" name="subject" placeholder="Subject" maxlength="50" required>
           }
-
-
 
           <textarea name="message" [(ngModel)]="message" (keydown.enter)="onEnter($event)"
             [placeholder]="selectedPlatform === 'email' ? 'Send me an email to contact me' : 'Type your WhatsApp message here'"></textarea>
@@ -75,6 +75,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>

@@ -46,11 +46,11 @@
   }
 
   textarea {
-    @apply bg-white text-black w-72 max-h-48 min-h-28 text-sm text-wrap rounded-lg p-3 hover:scale-105 transition-all duration-300 border-main mt-3;
+    @apply bg-white text-black w-56 sm:w-72 max-h-40 min-h-24 sm:max-h-48 sm:min-h-28 text-[13px] sm:text-sm text-wrap rounded-lg p-3 hover:scale-105 transition-all duration-300 border-main mt-3;
   }
 
   input {
-    @apply bg-white text-black w-72 h-10 text-sm text-wrap rounded-lg p-3 hover:scale-105 transition-all duration-300 border-main -mt-1;
+    @apply bg-white text-black w-56 h-8 sm:w-72 sm:h-10 text-[13px] sm:text-sm text-wrap rounded-lg p-3 hover:scale-105 transition-all duration-300 border-main -mt-1;
   }
 
   #project {
