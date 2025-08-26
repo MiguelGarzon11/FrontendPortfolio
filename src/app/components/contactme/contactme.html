@@ -27,7 +27,7 @@
 
         <div class="flex flex-col justify-center items-center mt-3 sm:m-3 gap-3 sm:gap-5">
           <label class="justify-center text-white dark:text-black font-semibold text-md sm:text-xl" for="message">
-            <h3 class="font-medium mb-3 mt-2">
+            <h3 class="font-medium mb-3 mt-0">
               {{ selectedPlatform === 'email' ? 'Send email' : 'Send WhatsApp' }}
             </h3>
           </label>
@@ -53,7 +53,7 @@
             </svg>
 
             <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer"
-              (click)="selectedPlatform ===('whatsapp')">
+              (click)="setPlatform('whatsapp')">
               <use href="assets/icons/wh.svg"></use>
             </svg>
 
@@ -70,7 +70,7 @@
 
           </div>
 
-          <button class="mb-6 mt-2" id="button"
+          <button class="-mt-5" id="button"
             (click)="selectedPlatform === 'whatsapp' ? sendWhatsApp() : sendEmail() ">{{
             selectedPlatform === 'email' ? 'Send Email' : 'Send WhatsApp' }}
           </button>

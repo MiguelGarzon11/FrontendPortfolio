@@ -38,7 +38,7 @@
   }
 
   footer {
-    @apply h-40 flex flex-row justify-between;
+    @apply h-40 flex flex-row justify-between items-center;
   }
 
   button {
