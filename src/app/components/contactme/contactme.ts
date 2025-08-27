@@ -39,6 +39,13 @@ export class Contactme {
   }
 
   sendEmail() {
+    const text = this.message.trim() || this.subject.trim() || this.email.trim();
+
+    if (!text || !/^[a-zA-Z0-9 .,!?¿¡áéíóúÁÉÍÓÚñÑ]+$/.test(text)) {
+      alert('Please enter a valid message.');
+      return;
+    }
+
     if (!this.email || !this.subject || !this.message) {
       alert('Por favor completa todos los campos');
       return;
