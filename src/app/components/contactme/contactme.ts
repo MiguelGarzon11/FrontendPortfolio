@@ -39,15 +39,20 @@ export class Contactme {
   }
 
   sendEmail() {
-    const text = this.message.trim() || this.subject.trim() || this.email.trim();
+    const regex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com)$/;
 
-    if (!text || !/^[a-zA-Z0-9 .,!?¿¡áéíóúÁÉÍÓÚñÑ]+$/.test(text)) {
-      alert('Please enter a valid message.');
+    if (!regex.test(this.email)) {
+      alert('El email debe ser válido y pertenecer a un dominio permitido.');
       return;
     }
 
-    if (!this.email || !this.subject || !this.message) {
-      alert('Por favor completa todos los campos');
+    if (this.subject.trim().length > 50) {
+      alert('El asunto no puede contener más de 50 caracteres.')
+      return;
+    }
+
+    if (!this.subject || !this.email || !this.message) {
+      alert('Complete todos los campos.')
       return;
     }
 
