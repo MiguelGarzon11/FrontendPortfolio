@@ -44,24 +44,25 @@ export class Contactme {
       return;
     }
 
-    const payload = {
-      email: this.email,
-      subject: this.subject,
-      message: this.message
-    };
-
-    console.log('Enviando payload', payload);
-
-    this.http.post('https://localhost:3000/contactme', payload).subscribe({
-      next: (res: any) => {
-        alert('Correo enviado con éxito');
+    fetch('https://sendemailapi-ccee.onrender.com/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-
-      error: (error) => {
-        console.log('Error enviando al correo: ', error);
-        alert('Error al enviar el correo: ' + error.error.message);
-      }
-    });
+      body: JSON.stringify({
+        email: this.email,
+        subject: this.subject,
+        message: this.message,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Respuesta de la API:', data);
+        alert('Correo enviado con éxito');
+      }).catch(error => {
+        console.log('Error:', error);
+        alert('Hubo un error al enviar el correo');
+      });
   }
 
   onEnter(event: any) {
