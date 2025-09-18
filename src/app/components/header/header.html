@@ -1,69 +1,44 @@
 <header id="header"
-  class="flex flex-col w-full sm:flex-row justify-center items-center mt-8 mb-8 md:mt-12 md:mb-12 m-3 top-0 gap-8 sm:gap-8 md:gap-10 lg:gap-48">
-  <h1 class="flex items-center gap-3 text-md md:text-xl lg:text-2xl font-sans mx-2 font-extrabold">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round"
-      class="lucide lucide-braces-icon lucide-braces w-5 h-5 md:w-6 md:h-6 lg:w-9 lg:h-9">
-      <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" />
-      <path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1" />
-    </svg>
-
-    Dev Miguel Angel
-  </h1>
-  <div class="flex flex-row gap-5 md:gap-5 lg:gap-10 justify-around">
-    <nav class="flex flex-row justify-center items-center gap-3 lg:gap-10 text-[10px] sm:text-sm md:text-md">
+  class="flex flex-col w-full justify-center items-center mt-8 mb-8 sm:flex-row sm:justify-around  md:mt-12 md:mb-12 my-3 top-0 gap-8 sm:gap-8 md:gap-9 lg:gap-20">
+  <a href="/">
+    <h1 class="flex items-center gap-3 text-md md:text-2xl lg:text-3xl font-sans font-bold">
+      <svg class="h-4 w-4 sm:h-6 sm:w-6 drop-shadow-lg text-black dark:text-white transition-all duration-500">
+        <use href="assets/icons/braces.svg"></use>
+      </svg>
+      Dev Miguel Angel
+    </h1>
+  </a>
+  <div class="flex flex-row gap-5 sm:gap-16 md:gap-20 lg:gap-32 justify-around">
+    <nav class="flex flex-row justify-center items-center gap-4 lg:gap-10 text-[10px] sm:text-sm md:text-md">
       <a routerLink="/">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-house-icon lucide-house w-4 h-4 md:w-6 md:h-6">
-          <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
-          <path
-            d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
+          <use  href="assets/icons/home.svg"></use>
         </svg>
-        Home
+        <p class="sm:hidden lg:flex hover:flex transition-all duration-200">Home</p>
       </a>
       <a href="#projects">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-id-card-lanyard-icon lucide-id-card-lanyard w-4 h-4 md:w-6 md:h-6">
-          <path d="M13.5 8h-3" />
-          <path d="m15 2-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3" />
-          <path d="M16.899 22A5 5 0 0 0 7.1 22" />
-          <path d="m9 2 3 6" />
-          <circle cx="12" cy="15" r="3" />
+        <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
+          <use href="assets/icons/folder.svg"></use>
         </svg>
-        Projects
+        <p class="sm:hidden lg:flex">Projects</p>
       </a>
       <a href="#skills">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-brain-icon lucide-brain w-4 h-4 md:w-6 md:h-6">
-          <path d="M12 18V5" />
-          <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" />
-          <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" />
-          <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" />
-          <path d="M18 18a4 4 0 0 0 2-7.464" />
-          <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" />
-          <path d="M6 18a4 4 0 0 1-2-7.464" />
-          <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" />
+        <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
+          <use href="assets/icons/brain.svg"></use>
         </svg>
-        Skills
+        <p class="sm:hidden lg:flex">Skills</p>
       </a>
       <a routerLink="/contactme">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-mailbox-icon lucide-mailbox w-4 h-4 md:w-6 md:h-6">
-          <path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z" />
-          <polyline points="15,9 18,9 18,11" />
-          <path d="M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2" />
-          <line x1="6" x2="7" y1="10" y2="10" />
+        <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
+          <use href="assets/icons/contact.svg"></use>
         </svg>
-        Contact Me
+        <p class="sm:hidden lg:flex">Contact Me</p>
       </a>
     </nav>
 
     <label for="darkSwtich" class="relative inline-block w-7 h-4 sm:w-10 sm:h-6 cursor-pointer">
-      <input data-hs-theme-switch="" type="checkbox" id="darkSwtich" class="peer sr-only">
+      <input type="checkbox" id="darkSwtich" class="peer sr-only" [(ngModel)]="isDark"
+        (change)="onThemeToggle()" />
       <span
         class="flex flex-row justify-center gap-[1px] sm:gap-0.5 items-center absolute inset-0 bg-buttonS rounded-full transition-colors duration-500 ease-in-out peer-checked:bg-buttonS dark:bg-neutral-700 dark:peer-checked:bg-button peer-disabled:opacity-50 peer-disabled:pointer-events-none">
 
