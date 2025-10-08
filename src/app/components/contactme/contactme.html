@@ -1,80 +1,74 @@
-<div>
-  <div class=" flex flex-col justify-center items-center gap-10 m-12">
+<div class="relative top-16 h-auto flex flex-col justify-center items-center gap-10 m-12 pb-20">
+  <h1 class="text-2xl sm:text-3xl text-main dark:text-secondary">Contact Me</h1>
+  <div class="flex flex-col justify-center items-center mb-12 rounded-t-2xl rounded-b-xl">
+    <div
+      class="flex justify-between items-center h-[25px] w-[350px] sm:h-[35px] sm:w-[550px] bg-main dark:bg-secondary rounded-t-2xl shadow-md shadow-main dark:shadow-button">
 
-    <h1 class="text-2xl sm:text-3xl text-main dark:text-secondary">Contact Me</h1>
+      <div class="flex gap-1.5 sm:gap-2 mx-3">
 
-    <div class="flex flex-col justify-center items-center mb-12 rounded-t-2xl rounded-b-xl">
-
-      <div
-        class="flex justify-between items-center h-[25px] w-[350px] sm:h-[35px] sm:w-[550px] bg-main dark:bg-secondary rounded-t-2xl shadow-md shadow-main dark:shadow-button">
-
-        <div class="flex gap-1.5 sm:gap-2 mx-3">
-
-          <div class="bg-red-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
-          <div class="bg-yellow-400 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
-          <div class="bg-green-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
-        </div>
-
-        <div class="flex text-nowrap">
-          <h1 class="text-sm sm:text-md md:text-lg text-secondary dark:text-main">Let's work together</h1>
-        </div>
-
-        <div class="w-[70px]"></div>
+        <div class="bg-red-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
+        <div class="bg-yellow-400 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
+        <div class="bg-green-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
       </div>
 
-      <div
-        class="flex flex-col justify-around h-[450px] w-[350px] sm:h-[600px] sm:w-[550px] bg-buttonS dark:bg-button rounded-b-xl shadow-sm shadow-main dark:shadow-secondary">
+      <div class="flex text-nowrap">
+        <h1 class="text-sm sm:text-md md:text-lg text-secondary dark:text-main">Let's work together</h1>
+      </div>
 
-        <div class="flex flex-col justify-center items-center mt-3 sm:m-3 gap-3 sm:gap-5">
-          <label class="justify-center text-white dark:text-black font-semibold text-md sm:text-xl" for="message">
-            <h3 class="font-medium mb-3 mt-0">
-              {{ selectedPlatform === 'email' ? 'Send email' : 'Send WhatsApp' }}
-            </h3>
-          </label>
+      <div class="w-[70px]"></div>
+    </div>
 
-          @if (selectedPlatform === 'email') {
-          <input type="email" [(ngModel)]="email" name="email" placeholder="Your email" required>
-          }
+    <div
+      class="flex flex-col justify-around h-[450px] w-[350px] sm:h-[600px] sm:w-[550px] bg-buttonS dark:bg-button rounded-b-xl shadow-sm shadow-main dark:shadow-secondary">
 
-          @if (selectedPlatform === 'email') {
-          <input type="text" [(ngModel)]="subject" name="subject" placeholder="Subject" maxlength="50" required>
-          }
+      <div class="flex flex-col justify-center items-center mt-3 sm:m-3 gap-3 sm:gap-5">
+        <label class="justify-center text-white dark:text-black font-semibold text-md sm:text-xl" for="message">
+          <h3 class="font-medium mb-3 mt-0">
+            {{ selectedPlatform === 'email' ? 'Send email' : 'Send WhatsApp' }}
+          </h3>
+        </label>
 
-          <textarea name="message" [(ngModel)]="message" (keydown.enter)="onEnter($event)"
-            [placeholder]="selectedPlatform === 'email' ? 'Send me an email to contact me' : 'Type your WhatsApp message here'"></textarea>
+        @if (selectedPlatform === 'email') {
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Your email" required>
+        }
 
-          <h3 class="font-extralight text-sm sm:text-md sm:text-lg text-white dark:text-black">Select Opcion</h3>
+        @if (selectedPlatform === 'email') {
+        <input type="text" [(ngModel)]="subject" name="subject" placeholder="Subject" maxlength="50" required>
+        }
 
-          <div class="flex flex-row gap-3 md:gap-5 justify-center items-center">
+        <textarea name="message" [(ngModel)]="message" (keydown.enter)="onEnter($event)"
+          [placeholder]="selectedPlatform === 'email' ? 'Send me an email to contact me' : 'Type your WhatsApp message here'"></textarea>
 
-            <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer"
-              (click)="setPlatform('email')">
-              <use href="assets/icons/gmail.svg"></use>
+        <h3 class="font-extralight text-sm sm:text-md sm:text-lg text-white dark:text-black">Select Opcion</h3>
+
+        <div class="flex flex-row gap-3 md:gap-5 justify-center items-center">
+
+          <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer"
+            (click)="setPlatform('email')">
+            <use href="assets/icons/gmail.svg"></use>
+          </svg>
+
+          <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer"
+            (click)="setPlatform('whatsapp')">
+            <use href="assets/icons/wh.svg"></use>
+          </svg>
+
+          <a href="https://github.com/MiguelGarzon11" target="_blank">
+            <svg id="sendmessage2" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer">
+              <use href=" assets/icons/github.svg"></use>
             </svg>
-
-            <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer"
-              (click)="setPlatform('whatsapp')">
-              <use href="assets/icons/wh.svg"></use>
+          </a>
+          <a href="https://www.linkedin.com/in/miguelangelgarz%C3%B3n/" target="_blank">
+            <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer">
+              <use href=" assets/icons/in.svg"></use>
             </svg>
+          </a>
 
-            <a href="https://github.com/MiguelGarzon11" target="_blank">
-              <svg id="sendmessage2" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer">
-                <use href=" assets/icons/github.svg"></use>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/miguelangelgarz%C3%B3n/" target="_blank">
-              <svg id="sendmessage" class="h-9 w-9 sm:h-10 sm:w-10 drop-shadow-lg cursor-pointer">
-                <use href=" assets/icons/in.svg"></use>
-              </svg>
-            </a>
-
-          </div>
-
-          <button class="-mt-5" id="button"
-            (click)="selectedPlatform === 'whatsapp' ? sendWhatsApp() : sendEmail() ">{{
-            selectedPlatform === 'email' ? 'Send Email' : 'Send WhatsApp' }}
-          </button>
         </div>
+
+        <button class="-mt-5" id="button" (click)="selectedPlatform === 'whatsapp' ? sendWhatsApp() : sendEmail() ">{{
+          selectedPlatform === 'email' ? 'Send Email' : 'Send WhatsApp' }}
+        </button>
       </div>
     </div>
   </div>

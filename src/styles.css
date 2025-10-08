@@ -15,7 +15,7 @@
   body {
     @apply bg-secondary dark:bg-main;
     @apply text-black dark:text-white;
-    @apply h-full;
+    @apply h-auto;
   }
 
   h1,
@@ -34,7 +34,7 @@
   }
 
   hr {
-    @apply h-px w-11/12 bg-gradient-to-r from-transparent via-buttonS to-transparent border-0 dark:via-white;
+    @apply h-[1px] w-full bg-gradient-to-r from-transparent via-buttonS to-transparent border-0 dark:via-white;
   }
 
   footer {

@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './contactme.html',
   styleUrl: './contactme.css'
 })
-export class Contactme {
+export default class Contactme {
   constructor(private http: HttpClient) { }
 
   selectedPlatform: 'email' | "whatsapp" = 'email';
