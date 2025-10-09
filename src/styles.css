@@ -1,21 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
+@theme {
   --color-main: #222326;
   --color-secondary: #d7d7d9;
   --color-button: #9fa3a6;
-  --color-buttonS: #3c3d40;
+  --color-button-s: #3c3d40;
 }
 
 @layer base {
   body {
     @apply bg-secondary dark:bg-main;
     @apply text-black dark:text-white;
-    @apply h-auto;
+    @apply mt-20 sm:mt-36 h-auto w-full justify-center items-center;
   }
 
   h1,
@@ -34,7 +32,7 @@
   }
 
   hr {
-    @apply h-[1px] w-full bg-gradient-to-r from-transparent via-buttonS to-transparent border-0 dark:via-white;
+    @apply h-px w-full bg-linear-to-r from-transparent via-button-s to-transparent border-0 dark:via-white;
   }
 
   footer {
@@ -42,7 +40,7 @@
   }
 
   button {
-    @apply text-white text-sm sm:text-lg font-semibold dark:text-black h-8 w-32 sm:h-10 sm:w-48 bg-main dark:bg-secondary rounded-lg hover:bg-buttonS hover:dark:bg-white hover:border-spacing-3 border-main hover:scale-105 transition-all duration-300;
+    @apply text-white text-sm sm:text-lg font-semibold dark:text-black h-8 w-32 sm:h-10 sm:w-48 bg-main dark:bg-secondary rounded-lg hover:bg-button-s dark:hover:bg-white hover:border-spacing-3 border-main hover:scale-105 transition-all duration-300;
   }
 
   textarea {
@@ -53,12 +51,12 @@
     @apply bg-white text-black w-56 h-8 sm:w-72 sm:h-10 text-[13px] sm:text-sm text-wrap rounded-lg p-3 hover:scale-105 transition-all duration-300 border-main -mt-1;
   }
 
-  #project {
+  #card {
     @apply drop-shadow-black dark:drop-shadow-white hover:scale-105 transition-all duration-300;
   }
 
   #button {
-    @apply text-sm bg-button text-white dark:bg-main dark:text-white hover:bg-secondary dark:hover:bg-buttonS hover:text-white;
+    @apply text-sm bg-button text-white dark:bg-main dark:text-white hover:bg-secondary dark:hover:bg-button-s hover:text-white;
   }
 
   #sendmessage {

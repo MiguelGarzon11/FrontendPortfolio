@@ -9,22 +9,6 @@
   <link rel="icon" href="assets/favicon/faviconB.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
   <link rel="icon" href="assets/favicon/faviconW.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 
-
-<script>
-  let theme = localStorage.getItem('hs_theme');
-
-  if (!theme) {
-    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  if (theme === 'dark') {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-</script>
-
-
 </head>
 
 <body>
