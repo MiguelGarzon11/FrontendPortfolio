@@ -42,20 +42,24 @@
   <hr class="fixed top-[79px] sm:top-24">
   <div class="flex w-auto h-auto justify-center items-center gap-1">
     <button (click)="toggleTheme()"
-      class="relative flex items-center w-10 h-5 sm:w-11 sm:h-6 rounded-full transition-colors duration-400"
+      class="relative cursor-pointer flex justify-start items-center scale-none w-9.5 h-5 sm:w-10 sm:h-6 rounded-full transition-colors duration-400"
       [ngClass]="currentTheme() === 'dark' ? 'bg-button' : 'bg-button-s'">
+      <div class="flex flex-row items-center px-1 w-full">
+        <div class="flex w-full" [ngClass]="currentTheme() === 'dark' ? 'justify-start' : 'justify-end'">
+          @if (currentTheme() === 'dark') {
+            <svg class="h-4 w-4 text-main">
+              <use href="assets/icons/sun.svg"></use>
+            </svg>  
+          } @else {
+              <svg class="h-3.5 w-3.5 text-white">    
+              <use href="assets/icons/moon.svg"></use>
+            </svg>
+          }
+        </div>
+      </div>
       <div
-        class="absolute left-[2.5px] top-[2.5px] w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-white flex items-center justify-center transition-all duration-300"
-        [ngClass]="currentTheme() === 'dark' ? 'translate-x-5' : 'translate-x-0'">
-        @if (currentTheme() === 'dark') {
-        <svg class="h-3.5 w-3.5 text-gray-800">
-          <use href="assets/icons/moon.svg"></use>
-        </svg>
-        } @else {
-        <svg class="h-3.5 w-3.5 text-main">
-          <use href="assets/icons/sun.svg"></use>
-        </svg>
-        }
+        class="absolute left-0 w-3.5 h-3.5 sm:w-4.5 mx-1 sm:h-4.5 rounded-full flex items-center justify-center transition-all duration-300"
+        [ngClass]="currentTheme() === 'dark' ? 'translate-x-4 bg-main' : 'translate-x-0 bg-secondary' ">
       </div>
     </button>
   </div>
