@@ -40,7 +40,7 @@
   }
 
   button {
-    @apply text-white text-sm sm:text-lg font-semibold dark:text-black h-8 w-32 sm:h-10 sm:w-48 bg-main dark:bg-secondary rounded-lg hover:bg-button-s dark:hover:bg-white hover:border-spacing-3 border-main hover:scale-105 transition-all duration-300;
+    @apply text-white text-sm sm:text-lg font-semibold dark:text-black h-8 w-32 sm:h-10 sm:w-48 bg-main dark:bg-secondary rounded-lg hover:bg-button-s dark:hover:bg-white hover:border-spacing-3 border-main hover:scale-105 transition duration-300 active:scale-95;
   }
 
   textarea {
