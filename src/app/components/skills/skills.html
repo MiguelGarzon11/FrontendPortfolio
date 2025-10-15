@@ -3,31 +3,32 @@
     <h1 class="text-2xl sm:text-3xl">My skills</h1>
   </div>
   <div class="flex flex-wrap w-full justify-center items-start h-auto p-10 gap-20">
-    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center font-mono font-extrabold ">
+    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center">
       <app-tarjet [title]="'Frontend'">
         @for (icon of iconsF; track icon) {
-          <svg class="w-16 h-16 md:w-18 md:h-18">
+        <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300">
           <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
       </app-tarjet>
     </div>
-    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center font-mono font-extrabold">
+    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center">
       <app-tarjet [title]="'Backend'">
         @for (icon of iconsB; track icon) {
-          <svg class="w-16 h-16 md:w-18 md:h-18">
+        <svg
+          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300 text-black dark:text-white">
           <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
-      }
+        }
       </app-tarjet>
     </div>
-    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center font-mono font-extrabold">
+    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center ">
       <app-tarjet [title]="'Tools'">
         @for (icon of iconsT; track icon) {
-          <svg class="w-16 h-16 md:w-18 md:h-18">
+        <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300">
           <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
-      }
+        }
       </app-tarjet>
     </div>
   </div>

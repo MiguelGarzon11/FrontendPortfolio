@@ -51,8 +51,16 @@
     @apply bg-white text-black w-56 h-8 sm:w-72 sm:h-10 text-[13px] sm:text-sm text-wrap rounded-lg p-3 hover:scale-105 transition-all duration-300 border-main -mt-1;
   }
 
+  .line {
+    @apply flex flex-row gap-4 text-button border-r-[3px] w-fit;
+  }
+
   #card {
     @apply drop-shadow-black dark:drop-shadow-white hover:scale-105 transition-all duration-300;
+  }
+
+  #card2 {
+    @apply hover:scale-none;
   }
 
   #button {

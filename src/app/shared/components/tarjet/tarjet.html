@@ -1,7 +1,10 @@
-<div class="w-full h-full flex flex-col bg-button dark:bg-button-s rounded-b-3xl rounded-t-2xl drop-shadow-lg drop-shadow-button dark:drop-shadow-stone-800 p-10 justify-center">
-    <h1 class="text-2xl sm:text-4xl text-button-s text-shadow-lg text-shadow-secondary dark:text-shadow-stone-800 dark:text-button text-nowrap font-stretch-expanded pb-10">{{ title }}</h1>
-    <div class="flex flex-wrap w-full justify-center items-center gap-5">
-        <ng-content></ng-content>
-    </div>
-    
+<div
+  class="w-full h-full flex flex-col bg-button/20 dark:bg-button-s/20 rounded-b-3xl rounded-t-2xl drop-shadow-lg drop-shadow-button dark:drop-shadow-stone-800 p-5 sm:p-10 justify-center">
+  <h1
+    class="text-2xl sm:text-3xl text-button-s dark:text-button text-nowrap font-stretch-expanded pb-5 sm:pb-10 font-mono font-extrabold">
+    {{ title }}</h1>
+  <div class="flex flex-wrap w-full justify-center items-center gap-5">
+    <ng-content></ng-content>
+  </div>
+
 </div>

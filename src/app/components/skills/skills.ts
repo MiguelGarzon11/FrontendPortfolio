@@ -22,15 +22,17 @@ export class Skills {
     'javascript',
     'typescript',
     'postgres',
-    'fastapi'
+    'fastapi',
+    'linux',
+    'node',
   ];
 
   iconsB: string[] = [
     'python',
-    'docker',
     'postgres',
     'aws',
-    'fastapi'
+    'fastapi',
+    'node',
   ]
 
   iconsF: string[] = [
@@ -46,6 +48,7 @@ export class Skills {
   iconsT: string[] = [
     'github',
     'git',
-
+    'docker',
+    'linux',
   ]
 }
