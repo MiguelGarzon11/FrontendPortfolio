@@ -2,10 +2,10 @@
   <div id="home" class="flex flex-col gap-10 lg:gap-16 justify-center items-center w-full h-auto ">
     <div class="flex flex-col md:flex-row justify-around items-center w-full h-auto px-20">
       <div class="flex flex-col justify-center items-center">
-        <svg
-          class="w-64 h-64 sm:h-72 sm:w-72 lg:w-96 lg:h-96 drop-shadow-2xl text-main dark:text-secondary dark:shadow-secondary">
-          <use href="assets/files/figura.svg"></use>
-        </svg>
+        <div class="relative w-64 h-64 sm:h-72 sm:w-72 lg:w-80 lg:h-80 overflow-hidden">
+          <img src="/assets/files/I.webp"
+            class="w-full h-full object-cover absolute top-0 left-0 grayscale-55 hover:grayscale-0 active:grayscale-0 duration-200 active:duration-75 [mask:radial-gradient(circle_at_top,white_5%,transparent_90%)]" />
+        </div>
       </div>
       <app-maincard></app-maincard>
     </div>

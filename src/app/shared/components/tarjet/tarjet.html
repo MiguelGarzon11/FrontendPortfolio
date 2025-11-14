@@ -6,5 +6,18 @@
   <div class="flex flex-wrap w-full justify-center items-center gap-5">
     <ng-content></ng-content>
   </div>
-
+  <div class="w-full h-full group">
+    <div class="absolute top-5 right-5 w-8 h-8">
+      <button
+        class="w-full h-full flex justify-center items-center rounded-full bg-main/5 hover:bg-main/10 dark:bg-secondary/5 dark:hover:bg-secondary/10 cursor-pointer">
+        <svg class="w-7 h-7 text-secondary hover:text-white">
+          <use href="/assets/icons/info.svg" />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="opacity-0 hidden group-hover:opacity-100 group-active:opacity-100 absolute bg-main/70 dark:bg-secondary/70 backdrop-blur-2xl px-5 w-auto h-auto py-2 top-2.5 right-14 rounded-2xl group-hover:flex items-center z-50">
+      <p class="font-extralight text-lg text-secondary dark:text-main ">Tap each icon for more information.</p>
+    </div>
+  </div>
 </div>
