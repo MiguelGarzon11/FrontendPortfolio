@@ -3,32 +3,24 @@
     <div class="flex flex-col md:flex-row justify-around items-center w-full h-auto px-20">
       <div class="flex flex-col justify-center items-center">
         <div class="relative w-64 h-64 sm:h-72 sm:w-72 lg:w-80 lg:h-80 overflow-hidden">
-          <img src="/assets/files/I.webp"
-            class="w-full h-full object-cover absolute top-0 left-0 sm:grayscale-55 hover:grayscale-0 active:grayscale-0 duration-200 active:duration-75 [mask:radial-gradient(circle_at_top,white_40%,transparent_90%)]" />
+          <img src="assets/files/I.webp"
+            class="w-full h-full object-cover absolute top-0 left-0 sm:grayscale-55 hover:grayscale-0 active:grayscale-0 duration-200 active:duration-75 [mask:radial-gradient(circle_at_top,white_40%,transparent_90%)] hover:cursor-pointer" />
         </div>
       </div>
-      <app-maincard></app-maincard>
     </div>
 
-    <div class="flex flex-col md:flex-row justify-around items-center w-full sm:w-[90%] h-auto sm:px-20 py-20">
+    <div class="flex flex-col md:flex-row justify-around items-center w-full h-auto sm:px-34 py-20">
       <div class="flex justify-start items-center gap-5 w-[70%] md:w-[60%]">
         <div class="flex flex-col justify-center items-start gap-5">
           <h1 class="font-sans text-2xl sm:text-3xl">Full-stack Developer</h1>
-          <p class="flex sm:w-[80%] flex-row text-wrap justify-start text-[16px] md:text-xl font-extralight">Hi, I'm
-            Miguel
-            Ángel
-            —
-            a
-            Full
-            Stack
-            developer in training with hands-on experience in Angular, Tailwind, React, JavaScript, TypeScript,
-            Python, SQL, Git, Docker, HTML, and CSS. I specialize in web development and building functional,
-            user-focused applications.
+          <p
+            class="flex sm:w-[80%] flex-row justify-start text-[16px] md:text-xl text-balance font-extralight text-base font-stretch-extra-expanded line-clamp-2">
+            {{text}}
           </p>
         </div>
       </div>
       <div class="flex flex-col justify-center items-center gap-3 py-10 sm:pt-0">
-        <a href="https://drive.google.com/uc?export=download&id=1Xd6WTJ0SeeIkOzqxQABOUxT6_crG0Vv4" download>
+        <a href="https://drive.google.com/uc?export=download&id=1gTeuRNteZD6CEGIXPYmoDrvrIGeqjcQL" download>
           <button>Download CV</button>
         </a>
         <div class="flex flex-row items-center justify-center gap-2 text-black dark:text-white">

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin "tailwindcss-motion";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -56,7 +56,7 @@
   }
 
   #card {
-    @apply drop-shadow-black dark:drop-shadow-white hover:scale-105 transition-all duration-300;
+    @apply drop-shadow-black dark:drop-shadow-white hover:scale-105 active:scale-95 duration-500 cursor-pointer;
   }
 
   #card2 {

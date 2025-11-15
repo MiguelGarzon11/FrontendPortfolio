@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-maincard',
   standalone: true,
-  imports: [CommonModule, FormsModule, Card],
+  imports: [CommonModule, FormsModule,],
   templateUrl: './maincard.html',
   styleUrl: './maincard.css'
 })

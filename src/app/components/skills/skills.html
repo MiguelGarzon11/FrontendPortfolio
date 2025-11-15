@@ -16,7 +16,7 @@
       <app-tarjet [title]="'Backend'">
         @for (icon of iconsB; track icon) {
         <svg
-          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300 text-black dark:text-white">
+          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer active:scale-105 transition-all duration-300 text-black dark:text-white">
           <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
