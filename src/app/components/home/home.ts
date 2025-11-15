@@ -10,6 +10,6 @@ import { Projects } from '../projects/projects';
   styleUrl: './home.css'
 })
 export class Home {
-  text = "Systems Engineering student with experience in full-stack development, UI/UX design, API integration and database management. Focused on building modern, scalable and user-centered applications using clean architecture, best practices and version control."
+  text = "Systems Engineering student with experience in UI/UX design, API integration, backend development, and database management. Focused on developing modern, scalable, and user-centric applications, applying clean architecture, best practices, and version control."
 }
 
