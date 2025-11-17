@@ -7,7 +7,7 @@
       <app-tarjet [title]="'Frontend'">
         @for (icon of iconsF; track icon) {
         <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300">
-          <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
+          <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
       </app-tarjet>
@@ -17,7 +17,7 @@
         @for (icon of iconsB; track icon) {
         <svg
           class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer active:scale-105 transition-all duration-300 text-black dark:text-white">
-          <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
+          <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
       </app-tarjet>
@@ -26,7 +26,7 @@
       <app-tarjet [title]="'Tools'">
         @for (icon of iconsT; track icon) {
         <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300">
-          <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
+          <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
       </app-tarjet>
@@ -40,7 +40,7 @@
         @for (i of [1,2,3,4,5,6,7,8,9]; track i) {
         @for (icon of icons; track icon) {
         <svg class="w-14 h-14 md:w-16 md:h-16">
-          <use [attr.href]="'assets/icons/skills/' + icon + '.svg'"></use>
+          <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
         }

@@ -4,7 +4,7 @@
     <a href="/">
       <h1 class="flex items-center gap-3 text-md md:text-2xl lg:text-3xl font-sans font-bold">
         <svg class="h-5 w-5 sm:h-6 sm:w-6 drop-shadow-lg text-black dark:text-white transition-all duration-500">
-          <use href="assets/icons/braces.svg"></use>
+          <use href="/assets/icons/braces.svg"></use>
         </svg>
         Dev Miguel Angel
       </h1>
@@ -12,7 +12,7 @@
     <div class="flex justify-center items-center sm:hidden">
       <button type="submit" (click)="onOpen()" class="w-auto h-auto rounded-none bg-transparent">
         <svg class="h-6 w-6 text-main dark:text-secondary">
-          <use href="assets/icons/toggle.svg"></use>
+          <use href="/assets/icons/toggle.svg"></use>
         </svg>
       </button>
     </div>
@@ -21,19 +21,19 @@
     <nav class="flex flex-row justify-center items-center gap-4 lg:gap-10 text-[10px] sm:text-sm md:text-md">
       <a href="#projects">
         <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
-          <use href="assets/icons/folder.svg"></use>
+          <use href="/assets/icons/folder.svg"></use>
         </svg>
         <p class="sm:hidden lg:flex">Projects</p>
       </a>
       <a href="#skills">
         <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
-          <use href="assets/icons/brain.svg"></use>
+          <use href="/assets/icons/brain.svg"></use>
         </svg>
         <p class="sm:hidden lg:flex">Skills</p>
       </a>
       <a routerLink="/contactme">
         <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-white transition-all duration-500">
-          <use href="assets/icons/contact.svg"></use>
+          <use href="/assets/icons/contact.svg"></use>
         </svg>
         <p class="sm:hidden lg:flex">Contact Me</p>
       </a>
@@ -48,11 +48,11 @@
         <div class="flex w-full" [ngClass]="currentTheme() === 'dark' ? 'justify-start' : 'justify-end'">
           @if (currentTheme() === 'dark') {
           <svg class="h-4 w-4 text-main">
-            <use href="assets/icons/sun.svg"></use>
+            <use href="/assets/icons/sun.svg"></use>
           </svg>
           } @else {
           <svg class="h-3.5 w-3.5 text-white">
-            <use href="assets/icons/moon.svg"></use>
+            <use href="/assets/icons/moon.svg"></use>
           </svg>
           }
         </div>
@@ -70,19 +70,19 @@
     <nav class="flex flex-col justify-start items-start gap-4 text-sm">
       <a href="#projects" (click)="onOpen()">
         <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-secondary transition-all duration-500">
-          <use href="assets/icons/folder.svg"></use>
+          <use href="/assets/icons/folder.svg"></use>
         </svg>
         <p class="font-medium sm:hidden lg:flex text-black dark:text-white">Projects</p>
       </a>
       <a href="#skills" (click)="onOpen()">
         <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-secondary transition-all duration-500">
-          <use href="assets/icons/brain.svg"></use>
+          <use href="/assets/icons/brain.svg"></use>
         </svg>
         <p class="font-medium sm:hidden lg:flex text-black dark:text-white">Skills</p>
       </a>
       <a routerLink="/contactme" (click)="onOpen()">
         <svg class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-secondary transition-all duration-500">
-          <use href="assets/icons/contact.svg"></use>
+          <use href="/assets/icons/contact.svg"></use>
         </svg>
         <p class="font-medium sm:hidden lg:flex text-black dark:text-white">Contact Me</p>
       </a>
