@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "tailwindcss-motion";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -13,7 +12,7 @@
   body {
     @apply bg-secondary dark:bg-main;
     @apply text-black dark:text-white;
-    @apply mt-20 sm:mt-36 h-auto w-full justify-center items-center;
+    @apply mt-20 sm:mt-24 h-auto w-full justify-center items-center;
   }
 
   h1,
@@ -40,7 +39,7 @@
   }
 
   button {
-    @apply text-white text-sm sm:text-lg font-semibold dark:text-black h-8 w-32 sm:h-10 sm:w-48 bg-main dark:bg-secondary rounded-lg hover:bg-button-s dark:hover:bg-white hover:border-spacing-3 border-main hover:scale-105 transition duration-300 active:scale-95;
+    @apply text-white text-sm sm:text-lg font-semibold dark:text-black h-8 w-32 sm:h-10 sm:w-48 bg-main dark:bg-secondary rounded-lg hover:bg-button-s dark:hover:bg-white hover:border-spacing-3 border-main transition duration-300 active:scale-95;
   }
 
   textarea {
@@ -56,7 +55,7 @@
   }
 
   #card {
-    @apply drop-shadow-black dark:drop-shadow-white hover:scale-105 active:scale-95 duration-500 cursor-pointer;
+    @apply drop-shadow-black dark:drop-shadow-white active:scale-95 duration-500 cursor-pointer;
   }
 
   #card2 {
@@ -87,4 +86,27 @@
 
 .animate-scroll {
   animation: scroll 35s linear infinite;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  margin-left: 2px;
+}
+
+/* Fondo */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Barra */
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 8px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #444;
+  cursor: pointer;
 }

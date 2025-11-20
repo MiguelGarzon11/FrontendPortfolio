@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -7,5 +7,14 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.css'
 })
 export class Card {
-  @Input() title = '';
+  @Input() title!: string;
+  @Input() description!: string;
+  @Input() technologies!: string[];
+
+  @Output() openModal = new EventEmitter<any>();
+
+  onCardClick() {
+    this.openModal.emit({ title: this.title, description: this.description, technologies: this.technologies });
+  }
+
 }

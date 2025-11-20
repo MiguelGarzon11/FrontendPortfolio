@@ -7,7 +7,7 @@ import { Tarjet } from '../../shared/components/tarjet/tarjet';
   standalone: true,
   imports: [CommonModule, Tarjet],
   templateUrl: './skills.html',
-  styleUrl: './skills.css'
+  styleUrl: './skills.css',
 })
 export class Skills {
   icons: string[] = [
@@ -27,13 +27,7 @@ export class Skills {
     'node',
   ];
 
-  iconsB: string[] = [
-    'python',
-    'postgres',
-    'aws',
-    'fastapi',
-    'node',
-  ]
+  iconsB: string[] = ['python', 'postgres', 'aws', 'fastapi', 'node'];
 
   iconsF: string[] = [
     'angular',
@@ -43,12 +37,7 @@ export class Skills {
     'react',
     'javascript',
     'typescript',
-  ]
+  ];
 
-  iconsT: string[] = [
-    'github',
-    'git',
-    'docker',
-    'linux',
-  ]
+  iconsT: string[] = ['github', 'git', 'docker', 'linux'];
 }

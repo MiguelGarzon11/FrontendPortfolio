@@ -1,12 +1,19 @@
-<section id="skills" class="flex flex-col justify-center items-center w-full h-auto  my-10 sm:px-20">
+<section
+  id="skills"
+  class="flex flex-col justify-center items-center w-full h-auto sm:px-20 pt-28"
+>
   <div class="w-[70%] sm:w-[95%] md:w-[90%] md:px-20">
-    <h1 class="text-2xl sm:text-3xl">My skills</h1>
+    <h1 class="text-2xl">My skills</h1>
   </div>
-  <div class="flex flex-wrap w-full justify-center items-start h-auto p-10 gap-20">
+  <div
+    class="flex flex-wrap w-full justify-center items-start h-auto p-10 gap-20"
+  >
     <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center">
       <app-tarjet [title]="'Frontend'">
         @for (icon of iconsF; track icon) {
-        <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300">
+        <svg
+          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300"
+        >
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
@@ -16,16 +23,19 @@
       <app-tarjet [title]="'Backend'">
         @for (icon of iconsB; track icon) {
         <svg
-          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer active:scale-105 transition-all duration-300 text-black dark:text-white">
+          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer active:scale-105 transition-all duration-300 text-black dark:text-white"
+        >
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
       </app-tarjet>
     </div>
-    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center ">
+    <div class="w-[90%] h-[70%] sm:h-[40%] sm:w-[40%] text-center">
       <app-tarjet [title]="'Tools'">
         @for (icon of iconsT; track icon) {
-        <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300">
+        <svg
+          class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300"
+        >
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         }
@@ -34,16 +44,16 @@
   </div>
 
   <div
-    class="mask-x-from-70% mask-x-to-90% flex w-full justify-center items-center overflow-hidden bg-transparent my-20">
+    class="mask-x-from-70% mask-x-to-90% flex w-full justify-center items-center overflow-hidden bg-transparent my-20"
+  >
     <div class="whitespace-nowrap">
       <div class="flex w-[90%] gap-8 animate-scroll">
-        @for (i of [1,2,3,4,5,6,7,8,9]; track i) {
-        @for (icon of icons; track icon) {
+        @for (i of [1,2,3,4,5,6,7,8,9]; track i) { @for (icon of icons; track
+        icon) {
         <svg class="w-14 h-14 md:w-16 md:h-16">
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
-        }
-        }
+        } }
       </div>
     </div>
   </div>

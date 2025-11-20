@@ -16,7 +16,7 @@ export class Theme {
   }
 
   private initTheme(): void {
-    if (!this.isBrowser) return; // Evita errores en SSR
+    if (!this.isBrowser) return;
 
     const savedTheme = localStorage.getItem(this.storageKey);
 

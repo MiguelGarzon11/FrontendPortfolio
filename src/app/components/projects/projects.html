@@ -1,17 +1,29 @@
-<div class="flex-col sm:flex-row justify-center items-center w-full h-full md:py-20">
+<div
+  class="flex-col sm:flex-row justify-center items-center w-full h-full pt-28"
+>
   <div class="flex flex-col gap-10 justify-center items-center w-full sm:px-20">
-    <div class="flex flex-col gap-5 justify-center items-start w-[70%] sm:w-[80%]">
-      <h1 class="text-2xl sm:text-3xl">My projects</h1>
-      <p class="font-extralight text-[16px] sm:text-lg md:text-xl">Here you'll find projects where I put my knowledge
-        into practice
-        to build
-        functional
-        and
-        effective solutions.</p>
+    <div
+      class="flex flex-col gap-5 justify-center items-start w-[70%] sm:w-[80%]"
+    >
+      <h1 class="text-2xl">My projects</h1>
+      <p class="font-extralight text-[16px] sm:text-lg">
+        Here you'll find projects where I put my knowledge into practice to
+        build functional and effective solutions.
+      </p>
     </div>
-    <div class="flex justify-center sm:items-center flex-col lg:flex-row gap-10 w-[300px] sm:w-full h-full">
-      <app-card title="Academy"></app-card>
-      <app-card title="Vaultly"></app-card>
+    <div
+      class="flex justify-center sm:items-center flex-col lg:flex-row gap-10 w-[300px] sm:w-full h-full mt-5"
+    >
+      @for (p of projects; track p.id) {
+        <app-card
+          [title]="p.title"
+          [description]="p.description"
+          (openModal)="openProjectModal($event)"
+          [technologies]="['astro', 'react', 'typescript', 'fastapi', 'tailwind', 'python', 'postgres']"
+        ></app-card>
+      }
     </div>
+
+    <app-info-project [visible]="modalVisible" [data]="modalData" (close)="closeModal()"></app-info-project>
   </div>
 </div>

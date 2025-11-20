@@ -1,13 +1,25 @@
 <div
-  class="flex flex-col items-center justify-center h-[250px] sm:h-[300px] sm:w-[400px] bg-main dark:bg-secondary rounded-t-2xl rounded-b-xl p-[3px]"
-  id="card">
-  <div class="relative flex flex-row h-[15%] w-full items-center">
+  class="flex flex-col items-center justify-center w-[300px] h-[200px] sm:h-[265px] sm:w-[400px] bg-button-s rounded-t-2xl rounded-b-xl p-[3px] transition-all duration-500 group"
+  id="card" (click)="onCardClick()">
+
+  <div class="relative flex flex-row h-[12%] sm:h-[10%] w-full items-center">
     <div class="absolute left-2 bg-red-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
     <div class="absolute left-6.5 bg-yellow-400 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
     <div class="absolute left-11 bg-green-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
-    <h1 class="absolute top-[h-1/2] text-center w-full text-secondary dark:text-main z-50">{{title}}</h1>
   </div>
-  <div class="w-full h-full bg-button-s rounded-b-xl rounded-t-sm overflow-hidden">
-    <ng-content></ng-content>
+
+  <div class="relative w-full h-full bg-button-s rounded-b-xl rounded-t-sm overflow-hidden">
+
+    <img src="/assets/files/{{title}}.webp" alt="Imagen {{title}}" class="w-full h-full object-cover grayscale-50 opacity-70 cursor-pointer group-hover:opacity-20 hover:cursor-pointer transition-all duration-500">
+
+    <p class="absolute opacity-0 bottom-5 left-5 w-[75%] group-hover:opacity-100 text-sm line-clamp-2 font-extralight text-white">{{ description }}</p>
+
+    <h1 class="absolute opacity-0 top-5 left-5 text-lg  sm:text-xl font-medium text-white group-hover:opacity-100">{{title}}</h1>
+
+    <span class="opacity-0 group-hover:opacity-100 absolute flex size-5 bottom-7 right-7">
+      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-button-s opacity-75"></span>
+      <span class="relative inline-flex size-5 rounded-full bg-button-s"></span>
+    </span>
+
   </div>
 </div>
