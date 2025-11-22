@@ -24,7 +24,7 @@
                class="w-full h-auto rounded-xl dark:opacity-80">
           <a href="https://vaultlyc.vercel.app" target="_blank"
              class="absolute bottom-3 right-3 size-8 active:scale-95 flex justify-center items-center">
-            <svg class="text-main size-6 duration-100">
+            <svg class="text-main size-5 duration-100">
               <use href="/assets/icons/go.svg"></use>
             </svg>
           </a>
@@ -38,13 +38,14 @@
         
         <div class="flex w-full h-auto space-x-2 overflow-x-auto shrink-0 pb-2">
           @for (t of data.technologies; track t) {
-            <app-label [icono]="t"></app-label>
+            <app-label [icono]="t">
+            </app-label>
           }
         </div>
 
         <div class="w-full h-auto flex flex-col gap-2 px-2">
           <h1 class="text-lg sm:text-xl md:text-2xl">{{data.title}}</h1>
-          <p class="text-sm sm:text-lg font-extralight">{{data.description}}</p>
+          <p class="text-sm sm:text-[16px] font-extralight">{{data.description}}</p>
         </div>
 
       </div>

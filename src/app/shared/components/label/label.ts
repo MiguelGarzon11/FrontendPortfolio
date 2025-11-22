@@ -1,8 +1,10 @@
+import { TitleCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-label',
-  imports: [],
+  standalone: true,
+  imports: [TitleCasePipe],
   templateUrl: './label.html',
   styleUrl: './label.css'
 })
