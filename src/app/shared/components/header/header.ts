@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Theme } from '../../../core/services/theme/theme';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,8 @@ import { CommonModule } from '@angular/common';
 export class Header {
   isOpen = false;
 
-  constructor(private theme: Theme) { }
+  constructor(private theme: Theme, private router: Router) { }
+
   onOpen() {
     this.isOpen = !this.isOpen;
   }
@@ -27,5 +29,16 @@ export class Header {
   currentTheme(): 'dark' | 'light' {
     return this.theme.currentTheme;
   }
+
+  scrollTo(section: string) {
+    this.router.navigate(['/'], { fragment: section });
+    const element = document.getElementById(section);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  goHome() {
+    this.router.navigate(['/']);
+  }
+
 
 }
