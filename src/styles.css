@@ -12,7 +12,7 @@
   body {
     @apply bg-secondary dark:bg-main;
     @apply text-black dark:text-white;
-    @apply mt-20 sm:mt-24 h-auto w-full justify-center items-center;
+    @apply mt-24 sm:mt-28 h-auto w-full justify-center items-center;
   }
 
   h1,

@@ -1,14 +1,14 @@
 <header
   id="header"
-  class="fixed top-0 bg-secondary/70 dark:bg-main/70 backdrop-blur-xl h-20 sm:h-24 flex w-full justify-center items-center flex-row sm:justify-around gap-5 sm:gap-8 md:gap-9 lg:gap-20 z-20 sm:px-20 px-10"
->
-  <div class="flex flex-row items-start  justify-around w-full h-full sm:w-auto sm:h-auto">
+  class="fixed top-0 bg-secondary/70 dark:bg-main/70 backdrop-blur-xl h-20 sm:h-24 flex w-full justify-center items-center flex-row sm:justify-around gap-5 sm:gap-8 md:gap-9 lg:gap-20 z-20 sm:px-20 px-10">
+
+  <div class="flex flex-row items-center justify-between w-full h-full sm:w-auto sm:h-auto">
 
     <a routerLink="/" class="flex flex-row items-center justify-center h-full gap-2 active:scale-95">
       <svg class="h-5 w-5 sm:size-6 sm:h-6 sm:w-6 drop-shadow-lg text-black dark:text-white transition-all duration-500">
           <use href="/assets/icons/braces.svg"></use>
       </svg>
-      <h1 class="text-2xl">Dev Miguel Angel</h1>
+      <h1 class="text-xl sm:text-2xl">Dev Miguel Angel</h1>
     </a>
     <div class="flex justify-center items-center sm:hidden">
       <button
@@ -84,11 +84,11 @@
 </header>
 
 @if (isOpen) {
-  <div class="fixed inset-0 size-screen backdrop-blur-sm z-10">
+  <div class="fixed inset-0 size-screen backdrop-blur-sm z-10" (click)="onOpen()">
     <div
-      class="sm:hidden absolute top-[80px] right-0 rounded-b-2xl bg-secondary/70 dark:bg-main/70 w-full h-auto border-b-2 border-button-s dark:border-secondary p-5 px-10 backdrop-blur-sm z-20">
-      <nav class="flex flex-col justify-start items-start gap-4 text-sm">
-        <a href="#projects" (click)="onOpen()">
+      class="sm:hidden absolute top-[80px] right-0 rounded-b-2xl bg-secondary/70 dark:bg-main/70 w-full h-auto border-b-2 border-button-s dark:border-secondary p-5 px-10 backdrop-blur-sm">
+      <nav class="flex flex-col justify-start items-start gap-4 text-sm z-10">
+        <a href="#projects" (click)="onOpen(); $event.stopPropagation()">
           <svg
             class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-secondary transition-all duration-500"
           >
@@ -98,7 +98,7 @@
             Projects
           </p>
         </a>
-        <a href="#skills" (click)="onOpen()">
+        <a href="#skills" (click)="onOpen(); $event.stopPropagation()">
           <svg
             class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-secondary transition-all duration-500"
           >
@@ -108,7 +108,7 @@
             Skills
           </p>
         </a>
-        <a routerLink="/contactme" (click)="onOpen()">
+        <a routerLink="/contactme" (click)="onOpen(); $event.stopPropagation()">
           <svg
             class="h-4 w-4 sm:h-5 sm:w-5 drop-shadow-lg text-black dark:text-secondary transition-all duration-500"
           >
