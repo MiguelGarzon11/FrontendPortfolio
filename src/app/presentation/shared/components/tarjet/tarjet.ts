@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './tarjet.css'
 })
 export class Tarjet {
-  @Input() title = '';
+  @Input() title: string = '';
+  @Input() icons: string[] = [];
 }

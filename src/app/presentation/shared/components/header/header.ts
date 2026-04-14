@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { Theme } from '../../../core/services/theme/theme';
+import { Theme } from '../../../../domain/services/theme/theme';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 

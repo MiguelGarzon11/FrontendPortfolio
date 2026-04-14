@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/components/card/card';
 import { InfoProject } from '../skills/components/info-project/info-project';
-import { title } from 'process';
+
 
 @Component({
   selector: 'app-projects',

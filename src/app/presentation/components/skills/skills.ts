@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Tarjet } from '../../shared/components/tarjet/tarjet';
+import { TarjetDTO } from '../../../domain/dto/tarjetDTO';
 
 @Component({
   selector: 'app-skills',
@@ -10,7 +11,8 @@ import { Tarjet } from '../../shared/components/tarjet/tarjet';
   styleUrl: './skills.css',
 })
 export class Skills {
-  icons: string[] = [
+  
+  icons = [
     'angular',
     'tailwind',
     'html',
@@ -26,10 +28,10 @@ export class Skills {
     'linux',
     'node',
   ];
-
-  iconsB: string[] = ['python', 'postgres', 'aws', 'fastapi', 'node'];
-
-  iconsF: string[] = [
+  
+  private iconsB: string[] = ['python', 'postgres', 'aws', 'fastapi', 'node'];
+  
+  private iconsF: string[] = [
     'angular',
     'tailwind',
     'html',
@@ -38,6 +40,15 @@ export class Skills {
     'javascript',
     'typescript',
   ];
+  
+  private iconsT: string[] = ['github', 'git', 'docker', 'linux', 'androidstudio'];
+  
+  private iconsA: string[] = ['kotlin']
 
-  iconsT: string[] = ['github', 'git', 'docker', 'linux'];
+  tarjets: TarjetDTO[] = [
+    { title: 'Android', icons: this.iconsA },
+    { title: 'Frontend', icons: this.iconsF },
+    { title: 'Backend', icons: this.iconsB },
+    { title: 'Tools', icons: this.iconsT}
+  ]
 }

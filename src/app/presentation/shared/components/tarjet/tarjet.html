@@ -1,13 +1,14 @@
 <div
-  class="w-[90%] h-full flex flex-col bg-button/20 dark:bg-button-s/20 rounded-b-3xl rounded-t-2xl drop-shadow-lg drop-shadow-button dark:drop-shadow-stone-800 p-5 sm:p-10 justify-center"
->
-  <h1
-    class="text-2xl sm:text-3xl text-button-s dark:text-button text-center text-nowrap font-stretch-expanded pb-5 sm:pb-10 font-mono font-extrabold"
-  >
+  class="w-full h-full flex flex-col bg-button/20 dark:bg-button-s/20 rounded-b-3xl rounded-t-2xl drop-shadow-lg drop-shadow-button dark:drop-shadow-stone-800 p-5 sm:p-10 justify-center">
+  <h1 class="text-2xl sm:text-3xl text-button-s dark:text-button text-center text-nowrap font-stretch-expanded pb-5 sm:pb-10 font-mono font-extrabold">
     {{ title }}
   </h1>
-  <div class="flex flex-wrap w-full justify-center items-center gap-5">
-    <ng-content></ng-content>
+  <div class="flex flex-wrap w-full md:min-w-80 md:max-w-80 justify-center items-center gap-5 ">
+    @for (icon of icons; track icon) {
+        <svg class="w-14 h-14 sm:w-16 sm:h-16 hover:scale-105 hover:cursor-pointer transition-all duration-300 ">
+          <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
+        </svg>
+    }
   </div>
   <div class="w-full h-full group">
     <div class="absolute top-5 right-5 w-8 h-8">
@@ -25,7 +26,7 @@
       class="opacity-0 hidden group-hover:opacity-100 group-active:opacity-100 absolute bg-main/50 dark:bg-secondary/50 px-5 w-auto h-auto py-2 top-2.5 right-14 rounded-2xl group-hover:flex items-center z-10 backdrop-blur-xl"
     >
       <p class="font-extralight text-sm text-secondary dark:text-main">
-        Tap each icon for more information.
+        Tap for more information.
       </p>
     </div>
   </div>
