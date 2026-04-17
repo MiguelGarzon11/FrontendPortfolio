@@ -1,0 +1,36 @@
+export default `<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dev Miguel Ángel</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/favicon/faviconB.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/favicon/faviconW.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+
+<link rel="stylesheet" href="styles-HOAVD3SH.css"></head>
+
+<body><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script>
+  <app-root></app-root>
+<link rel="modulepreload" href="chunk-K6M5TNWC.js"><script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-AGXNA3OO.js" type="module"></script></body>
+
+<script>
+  (function () {
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (_) {}
+  })();
+</script>
+
+</html>
+`;
