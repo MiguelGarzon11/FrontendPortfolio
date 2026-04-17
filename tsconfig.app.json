@@ -3,10 +3,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
+    "outDir": "./out-tsc/spec",
     "types": [
       "node"
-    ]
+    ],
   },
   "include": [
     "src/**/*.ts"

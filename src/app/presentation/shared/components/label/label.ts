@@ -10,6 +10,6 @@ import { Component, Input } from '@angular/core';
 })
 export class Label {
 
-  @Input() icono!: string;
+  @Input() icon: string = '';
 
 }

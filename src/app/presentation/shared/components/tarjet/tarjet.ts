@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Label } from '../label/label';
 
 @Component({
   selector: 'app-tarjet',
@@ -8,5 +9,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './tarjet.css'
 })
 export class Tarjet {
-  @Input() title = '';
+  @Input() title: string = '';
+  @Input() icons: string[] = [];
+  @Input() description: string = '';
+
+  tools: string[] = []
 }
