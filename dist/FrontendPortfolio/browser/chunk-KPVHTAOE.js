@@ -1,0 +1,1 @@
+import{Ea as n,Ib as a,Ob as m}from"./chunk-JPGLFDAF.js";var e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-contactme"]],decls:0,vars:0,template:function(o,p){},dependencies:[a,m],encapsulation:2});var t=e;export{t as default};

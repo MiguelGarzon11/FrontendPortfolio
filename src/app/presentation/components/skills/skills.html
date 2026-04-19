@@ -1,15 +1,13 @@
-<section
-  id="skills"
+<section id="skills"
   class="flex flex-col justify-center items-center w-full h-auto sm:px-20 pt-28">
 
-
-  <div class="w-[70%] sm:w-[95%] md:w-[80%] flex flex-col justify-start gap-5 mb-5">
+  <div class="w-[85%] sm:w-[95%] md:w-[80%] flex flex-col justify-start gap-5 mb-5">
     <h1 class="text-2xl text-start">Tech Stack</h1>
     <p class="font-extralight text-[16px] sm:text-lg">{{ description }}</p>
   </div>
 
-  <div class="flex flex-wrap w-full sm:w-[95%] md:w-[80%]">
-    <div class="grid size-full px-15 sm:p-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-10 justify-center items-stretch">
+  <div class="flex flex-wrap w-[85%] sm:w-[95%] md:w-[80%] px-5 sm:p-5">
+    <div class="grid size-full grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 justify-center items-stretch">
       @for (tarjet of tarjets; track tarjet) {
         <app-tarjet [title]="tarjet.title" [icons]="tarjet.icons" [description]="tarjet.description"></app-tarjet>
       }
