@@ -1,48 +1,51 @@
 <body>
-  <div id="home" class="flex flex-col gap-10 lg:gap-16 justify-center items-start h-auto w-[85%] sm:w-[95%] md:w-[80%]">
-    <div class="flex flex-col md:flex-row justify-around items-center h-auto px-20">
-      <div class="flex flex-col justify-center items-center">
-        <div class="relative w-64 h-64 sm:h-72 sm:w-72 lg:w-80 lg:h-80 overflow-hidden">
-          <img src="/assets/files/I.webp"
-            class="w-full h-full object-cover absolute top-0 left-0 sm:grayscale-55 hover:grayscale-0 active:grayscale-0 duration-200 active:duration-75 [mask:radial-gradient(circle_at_top,white_40%,transparent_90%)] hover:cursor-pointer z-0" />
-        </div>
-      </div>
-    </div>
+    <!--Home-->
+    <div id="home" class="mx-auto flex flex-col gap-10 lg:gap-16 justify-center items-center h-auto w-[85%] sm:w-[95%] md:w-[80%] pt-10 sm:pt-20">
 
-    <div class="flex flex-col md:flex-row justify-around items-center w-full h-auto sm:px-34 py-5 sm:space-y-10 md:space-x-8 lg:space-x-32">
-      <div class="flex justify-start items-center gap-5">
-        <div class="flex flex-col justify-center items-start gap-5 w-full">
-          <h1 class="font-sans text-2xl">Full-stack Developer</h1>
-          <p
-            class="flex sm:w-full flex-row justify-start text-[16px] md:text-lg text-balance font-extralight text-base font-stretch-extra-expanded line-clamp-2">
-            {{text}}
-          </p>
+      <!--Contenedor con foto-->
+      <div class="flex flex-col md:flex-row justify-center items-center h-auto">
+        <div class="flex flex-col justify-center items-center">
+          <div class="relative w-64 h-64 sm:h-72 sm:w-72 lg:w-80 lg:h-80 overflow-hidden">
+            <img src="/assets/files/I.webp"
+              class="w-full h-full object-cover absolute top-0 left-0 sm:grayscale-55 hover:grayscale-0 active:grayscale-0 duration-200 active:duration-75 [mask:radial-gradient(circle_at_top,white_40%,transparent_90%)] hover:cursor-pointer z-0" />
+          </div>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center gap-3 py-10 sm:pt-0">
-        <a href="https://drive.google.com/uc?export=download&id=1gTeuRNteZD6CEGIXPYmoDrvrIGeqjcQL" download>
-          <button>Download CV</button>
-        </a>
-        <div class="flex flex-row items-center justify-center gap-2 text-black dark:text-white">
-          <h1 class="text-sm sm:text-[16px] font-extralight">Follow me</h1>
-          <a href="https://github.com/MiguelGarzon11" target="_blank">
-            <svg class="h-8 w-8 text-black dark:text-secondary">
-              <use href="/assets/icons/github.svg"></use>
-            </svg>
+  
+      <!--Contenedor Con texto y botones de git y CV-->
+      <div class="flex flex-col md:flex-row justify-between md:justify-between items-center w-full h-auto md:px-28 py-5">
+        <div class="flex justify-center items-center gap-5">
+          <div class="flex flex-col justify-center items-start gap-5 size-full">
+            <h1 class="font-sans text-2xl">Full-stack Developer</h1>
+            <p
+              class="flex sm:w-full md:w-[80%] flex-row justify-start text-[16px] md:text-lg text-balance font-extralight text-base font-stretch-extra-expanded line-clamp-2">
+              {{text}}
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-3 py-10 sm:py-0">
+          <a href="https://drive.google.com/uc?export=download&id=1gTeuRNteZD6CEGIXPYmoDrvrIGeqjcQL" download>
+            <button>Download CV</button>
           </a>
-          <a href="https://www.linkedin.com/in/miguelangelgarz%C3%B3n/" target="_blank">
-            <svg class="h-12 w-12 text-black dark:text-secondary">
-              <use href="/assets/icons/in.svg"></use>
-            </svg>
-          </a>
+          <div class="flex flex-row items-center justify-center gap-2 text-black dark:text-white">
+            <h1 class="text-sm sm:text-[16px] font-extralight">Follow me</h1>
+            <a href="https://github.com/MiguelGarzon11" target="_blank">
+              <svg class="h-8 w-8 text-black dark:text-secondary">
+                <use href="/assets/icons/github.svg"></use>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/miguelangelgarz%C3%B3n/" target="_blank">
+              <svg class="h-12 w-12 text-black dark:text-secondary">
+                <use href="/assets/icons/in.svg"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
-  </div>
-  <div id="projects">
+    <!--Projects-->
     <app-projects></app-projects>
-  </div>
-  <div id="skills">
+    <!--Skills-->
     <app-skills></app-skills>
-  </div>
 </body>
