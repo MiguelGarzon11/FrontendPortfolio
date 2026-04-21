@@ -10,9 +10,9 @@
 
 @layer base {
   body {
-    @apply bg-secondary dark:bg-main;
+    @apply bg-secondary dark:bg-main m-0 p-0;
     @apply text-black dark:text-white;
-    @apply mt-24 sm:mt-28 h-auto w-full justify-center items-center;
+    @apply mt-20 h-auto overflow-x-hidden;
   }
 
   h1,
@@ -31,11 +31,11 @@
   }
 
   hr {
-    @apply h-px w-full bg-linear-to-r from-transparent via-button-s to-transparent border-0 dark:via-white;
+    @apply h-px w-full bg-linear-to-r from-transparent via-button-s to-transparent border-0 dark:via-white shrink-0;
   }
 
   footer {
-    @apply h-40 flex flex-row justify-between items-center;
+    @apply h-40 flex flex-row justify-between items-center w-full;
   }
 
   button {
