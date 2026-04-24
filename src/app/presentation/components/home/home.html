@@ -1,6 +1,6 @@
 <body>
     <!--Home-->
-    <div id="home" class="mx-auto flex flex-col gap-10 lg:gap-16 justify-center items-center h-auto w-[85%] sm:w-[95%] md:w-[80%] pt-10 sm:pt-20">
+    <div id="home" class="mx-auto flex flex-col gap-10 lg:gap-16 justify-center items-center h-auto w-[85%] sm:w-[95%] md:w-full lg:w-[90%] pt-10 sm:pt-20">
 
       <!--Contenedor con foto-->
       <div class="flex flex-col md:flex-row justify-center items-center h-auto">
@@ -13,7 +13,7 @@
       </div>
   
       <!--Contenedor Con texto y botones de git y CV-->
-      <div class="flex flex-col md:flex-row justify-between md:justify-between items-center w-full h-auto md:px-28 py-5">
+      <div class="flex flex-col md:flex-row justify-between md:justify-between items-center w-full h-auto md:px-14 py-5">
         <div class="flex justify-center items-center gap-5">
           <div class="flex flex-col justify-center items-start gap-5 size-full">
             <h1 class="font-sans text-2xl">Full-stack Developer</h1>
@@ -23,7 +23,7 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-col justify-center items-center gap-3 py-10 sm:py-0">
+        <div class="flex flex-col justify-center items-center gap-3 py-10 sm:py-0 lg:pr-10">
           <a href="https://drive.google.com/uc?export=download&id=1gTeuRNteZD6CEGIXPYmoDrvrIGeqjcQL" download>
             <button>Download CV</button>
           </a>
@@ -44,8 +44,8 @@
       </div>
 
     </div>
-    <!--Projects-->
-    <app-projects></app-projects>
     <!--Skills-->
     <app-skills></app-skills>
+    <!--Projects-->
+    <app-projects></app-projects>
 </body>
