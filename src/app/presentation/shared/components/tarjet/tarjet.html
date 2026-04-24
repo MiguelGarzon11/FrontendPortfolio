@@ -1,12 +1,12 @@
 <div
-  class="size-full col-span-1 row-span-1 flex flex-col bg-button/20 dark:bg-button-s/20 rounded-b-3xl rounded-t-2xl drop-shadow-lg drop-shadow-button dark:drop-shadow-stone-800 p-5 sm:p-10 justify-start gap-3.5">
-  <h1 class="text-2xl text-button-s dark:text-button text-start text-nowrap font-mono font-extrabold">
+  class="size-full col-span-1 row-span-1 flex flex-col bg-button/20 dark:bg-back rounded-b-3xl rounded-t-2xl drop-shadow-lg drop-shadow-button dark:drop-shadow-stone-800 p-5 py-8 sm:p-10 justify-start gap-3.5 dark:shadow-[inset_4px_4px_12px_#0C0C0D,inset_-6px_-6px_12px_#232325] ring-1 ring-button-s">
+  <h1 class="text-2xl text-button-s dark:text-button text-center text-nowrap font-mono font-extrabold">
     {{ title }}
   </h1>
   <p class="font-extralight text-sm dark:text-stone-200 text-stone-800">{{ description }}</p>
-  <div class="flex flex-wrap w-full justify-center items-start gap-3 my-2">
+  <div class="flex flex-wrap w-full justify-center items-start gap-3 my-2">   
     @for (icon of icons; track icon) {
-      <svg class="w-14 h-14 sm:w-15 sm:h-15 hover:scale-105 hover:cursor-pointer transition-all duration-300">
+      <svg class="w-12 h-12 sm:w-13 sm:h-13 hover:scale-105 hover:cursor-pointer transition-all duration-300">  
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
       </svg>
     }
