@@ -1,4 +1,4 @@
-<section id="skills" class="flex flex-col justify-center items-center h-auto pt-28 w-[85%] sm:w-[95%] md:w-full lg:w-[90%] mx-auto md:px-14 lg:px-14">
+<section id="stack" class="flex flex-col justify-center items-center h-auto pt-24 lg:pt-36 w-[85%] sm:w-[95%] md:w-full lg:w-[80%] mx-auto md:px-14 lg:px-14">
 
   <div class="w-full flex flex-col justify-start gap-5 mb-5">
     <h1 class="text-2xl text-start">Tech Stack</h1>
@@ -6,9 +6,9 @@
   </div>
 
   <div class="flex flex-wrap px-5 sm:p-5 justify-center w-full">
-    <div class="grid size-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-center items-stretch">
+    <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center items-stretch justify-content-center">
       @for (tarjet of tarjets; track tarjet) {
-        <app-tarjet [title]="tarjet.title" [icons]="tarjet.icons" [description]="tarjet.description"></app-tarjet>
+        <app-tarjet [title]="tarjet.title" [icons]="tarjet.icons" [description]="tarjet.description" [iconTarjet]="tarjet.iconTarjet"></app-tarjet>
       }
     </div>
   </div>
@@ -18,7 +18,7 @@
       <div class="flex w-full gap-8 animate-scroll">
         @for (i of [1,2,3,4,5,6,7,8,9]; track i) { @for (icon of icons; track
         icon) {
-        <svg class="w-12 h-12 md:w-13 md:h-13 shadow-xl">
+        <svg class="w-12 h-12 md:w-13 md:h-13">
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
         </svg>
         } }
