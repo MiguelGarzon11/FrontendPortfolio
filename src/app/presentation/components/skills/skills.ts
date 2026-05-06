@@ -51,9 +51,9 @@ export class Skills {
   private iconsA: string[] = ['kotlin', 'androidstudio']
 
   tarjets: TarjetDTO[] = [
-    { title: 'Android', icons: this.iconsA, description: 'Software development for smart terminals (POS) and mobile devices using modern languages.' },
-    { title: 'Frontend', icons: this.iconsF, description: 'Creation of modern and dynamic web components, applied to functional and responsive user interfaces.' },
-    { title: 'Backend', icons: this.iconsB, description: 'Experience building robust services, APIs, and database management.' },
-    { title: 'Tools', icons: this.iconsT, description: 'Experience using essential development tools, version control, and Unix/Linux environments.' }
+    { title: 'Android', icons: this.iconsA, description: 'Software development for smart terminals (POS) and mobile devices using modern languages.', iconTarjet: 'Android' },
+    { title: 'Frontend', icons: this.iconsF, description: 'Creation of modern and dynamic web components, applied to functional and responsive user interfaces.', iconTarjet: 'Front'},
+    { title: 'Backend', icons: this.iconsB, description: 'Experience building robust services, APIs, and database management.',iconTarjet: 'Back' },
+    { title: 'Tools', icons: this.iconsT, description: 'Experience using essential development tools, version control, and Unix/Linux environments.', iconTarjet: 'Tools' }
   ]
 }

@@ -12,6 +12,7 @@ export class Tarjet {
   @Input() title: string = '';
   @Input() icons: string[] = [];
   @Input() description: string = '';
+  @Input() iconTarjet: string = '';
 
   tools: string[] = []
 }
