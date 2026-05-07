@@ -1,25 +1,28 @@
-<div
-  class="flex flex-col items-center justify-center w-[300px] h-[200px] sm:h-[265px] sm:w-[400px] bg-button-s rounded-t-2xl rounded-b-xl p-[3px] transition-all duration-500 group"
-  id="card" (click)="onCardClick()">
+<div class="flex flex-col items-center justify-center w-75 h-50 sm:h-67 sm:w-100 lg:w-175 lg:h-110 bg-button-s rounded-t-2xl rounded-b-xl transition-all duration-600 ring-1 dark:ring-secondary/20 hover:shadow-2xl hover:shadow-secondary/70 hover:-translate-y-1.5"
+  id="card"> 
 
-  <div class="relative flex flex-row h-[12%] sm:h-[10%] w-full items-center">
-    <div class="absolute left-2 bg-red-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
-    <div class="absolute left-6.5 bg-yellow-400 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
-    <div class="absolute left-11 bg-green-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
+  <div class="relative flex flex-row h-[12%] w-full items-center">
+    <!-- Botones -->
+    <div class="absolute left-3 bg-red-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
+    <div class="absolute left-7.5 bg-yellow-400 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
+    <div class="absolute left-12 bg-green-500 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 rounded-full"></div>
+
+    <!-- URl -->
+    <div class="absolute flex justify-start items-center px-1.5 gap-2 bg-main h-6.5 w-[80%] left-20 rounded-xl ring-1 ring-secondary/10">
+      <div class="bg-button-s rounded-full ring-1 ring-secondary/25 size-4 flex justify-center items-center">
+        <svg class="size-3.5 text-secondary">
+          <use href="/assets/icons/adjust.svg" ></use>
+        </svg>
+      </div>
+      <p class="text-xs font-extralight text-secondary">https://{{ url }}</p>
+    </div>
+
   </div>
 
+
   <div class="relative w-full h-full bg-button-s rounded-b-xl rounded-t-sm overflow-hidden">
-
-    <img src="/assets/files/{{title}}.webp" alt="Imagen {{title}}" class="w-full h-full object-cover grayscale-50 opacity-70 cursor-pointer group-hover:opacity-20 hover:cursor-pointer transition-all duration-500">
-
-    <p class="absolute opacity-0 bottom-5 left-5 w-[75%] group-hover:opacity-100 text-sm line-clamp-2 font-extralight text-white">{{ description }}</p>
-
-    <h1 class="absolute opacity-0 top-5 left-5 text-lg  sm:text-xl font-medium text-white group-hover:opacity-100">{{title}}</h1>
-
-    <span class="opacity-100 absolute flex size-5 bottom-7 right-7">
-      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-button-s/80 opacity-75"></span>
-      <span class="relative inline-flex size-5 rounded-full bg-button-s/10"></span>
-    </span>
+    <!-- Imagen -->
+    <img src="/assets/files/{{title}}.webp" alt="Imagen {{title}}" class="w-full h-full object-cover grayscale-50 opacity-70 cursor-pointer hover:cursor-pointer transition-all duration-500">
 
   </div>
 </div>

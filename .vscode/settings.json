@@ -1,3 +1,9 @@
 {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+    ".gitignore": ".dockerignore, Dockerfile.dev, docker-compose.yml, .env*",
+    "package.json": "package-lock.json, angular.json, tsconfig.*, tailwind.config.js, .postcssrc.json, .editorconfig"
+  }
 }

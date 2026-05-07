@@ -1,4 +1,5 @@
-<div id="projects" class="flex-col h-full pt-28 justify-center items-center w-[85%] sm:w-[95%] md:w-full lg:w-[80%] mx-auto md:px-14">
+<div id="projects" class="flex-col h-full pt-36 justify-center items-center w-[85%] sm:w-[95%] md:w-full lg:w-[80%] mx-auto md:px-14 m
+pb-24">
   <div class="flex flex-col gap-10 justify-center items-start">
     <div class="flex flex-col gap-5 justify-center items-start">
       <h1 class="text-2xl">My projects</h1>
@@ -7,19 +8,61 @@
         build functional and effective solutions.
       </p>
     </div>
-    <div
-      class="flex justify-center items-center sm:items-center flex-col lg:flex-row gap-10 sm:w-full h-full mt-5"
-    >
-      @for (p of projects; track p.id) {
-        <app-card
-          [title]="p.title"
-          [description]="p.description"
-          (openModal)="openProjectModal($event)"
-          [technologies]="['astro', 'react', 'typescript', 'fastapi', 'tailwind', 'python', 'postgres']"
-        ></app-card>
+    <div class="flex flex-col justify-around items-center sm:items-center lg:flex-row gap-10 sm:w-full h-full mt-5">
+      <!-- Para cada proyecto -->
+      @for (p of projects; track p) {
+
+        <div class="flex flex-col md:flex-row w-full justify-center items-center gap-10">
+          <div class="w-[50%]">
+            @if (p.type == Platform.Web) {
+              <app-card
+                [title]="p.title"
+                [url]="p.url"
+              ></app-card>
+            }
+          </div>
+
+          <div class="w-[35%] flex flex-col items-start justify-center gap-7">
+              <div class="flex flex-col gap-2">
+                <!-- Titulo -->
+                <h1 class="text-5xl text-start">{{p.title}}</h1>
+                <!-- Tag -->
+                <p class="text-sm md:text-xl text-[#609efa] font-medium">{{ p.tag }}</p>
+              </div>
+
+              <!-- Description -->
+              <p class="text-sm md:text-[16px] text-secondary font-extralight">{{ p.description }}</p>
+
+              <!-- labels -->
+               <div class="w-full flex flex-wrap gap-2">
+                  @for (t of p.tech; track t) {
+                    <app-label [icon]="t"></app-label>
+                  }
+               </div>
+
+              <div class="flex justify-start items-center gap-3 mt-4">
+                <a href="https://{{p.url}}" target="_blank">
+                  <button>
+                    <p>Live demo</p>
+                    <svg class="size-4">
+                      <use href="/assets/icons/go.svg"></use>
+                    </svg>
+                  </button>
+                </a>
+                <a href="https://{{p.github}}" target="_blank">
+                  <button id="ButtonSecond">
+                    <p>Source</p>
+                    <svg class="size-5">
+                      <use href="/assets/icons/cat.svg"></use>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+          </div>
+
+        </div>
+
       }
     </div>
-
-    <app-info-project [visible]="modalVisible" [data]="modalData" (close)="closeModal()"></app-info-project>
   </div>
 </div>

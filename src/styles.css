@@ -46,7 +46,7 @@
   }
 
   button#ButtonSecond {
-    @apply text-main text-sm sm:text-[16px] font-normal dark:text-secondary h-10 w-38 sm:h-10 sm:w-44 bg-transparent rounded-3xl hover:bg-button/20 dark:hover:bg-button-s/50 ring-1 dark:ring-secondary/15 transition duration-300 active:scale-95 flex flex-row justify-center items-center gap-2.5 cursor-pointer ring-button-s/10 hover:ring-button-s/60 hover:dark:ring-secondary;
+    @apply text-main text-sm sm:text-[16px] font-normal dark:text-secondary h-10 w-38 sm:h-10 sm:w-44 bg-transparent rounded-3xl hover:bg-button/20 dark:hover:bg-button-s/50 ring-1 dark:ring-secondary/15 transition duration-300 active:scale-95 flex flex-row justify-center items-center gap-2.5 cursor-pointer ring-button-s/10 hover:ring-button-s/60 hover:dark:ring-secondary/60;
   }
 
   textarea {
