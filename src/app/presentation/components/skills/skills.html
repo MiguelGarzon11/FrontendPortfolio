@@ -16,11 +16,11 @@
   <div class="mask-x-from-70% mask-x-to-90% flex max-w-[85%] justify-center items-center overflow-hidden bg-transparent my-20">
     <div class="whitespace-nowrap">
       <div class="flex w-full gap-8 animate-scroll">
-        @for (i of [1,2,3,4,5,6,7,8,9]; track i) { @for (icon of icons; track
-        icon) {
-        <svg class="w-12 h-12 md:w-13 md:h-13">
-          <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
-        </svg>
+        @for (i of [1,2,3,4,5,6,7,8,9]; track i) { 
+          @for (icon of icons; track icon) {
+            <svg class="w-12 h-12 md:w-13 md:h-13">
+              <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
+            </svg>
         } }
       </div>
     </div>

@@ -9,12 +9,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class Card {
   @Input() title!: string;
   @Input() description!: string;
-  @Input() technologies!: string[];
+  @Input() tech!: string[];
+  @Input() url!: string;
 
   @Output() openModal = new EventEmitter<any>();
 
   onCardClick() {
-    this.openModal.emit({ title: this.title, description: this.description, technologies: this.technologies });
+    this.openModal.emit({ title: this.title, description: this.description, technologies: this.tech });
   }
 
 }

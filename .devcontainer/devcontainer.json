@@ -1,0 +1,19 @@
+{   
+    "name": "Portfolio Dev",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "portfolio-dev",
+    "workspaceFolder": "/app",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "csstools.postcss",
+                "ms-vscode-remote.remote-containers",
+                "bradlc.vscode-tailwindcss",
+                "miguelsolorio.symbols",
+                "Angular.ng-template",
+                "EliverLara.andromeda"
+            ]
+        }
+    }
+}
