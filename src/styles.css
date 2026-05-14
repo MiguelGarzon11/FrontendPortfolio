@@ -37,6 +37,10 @@
     @apply h-px w-full bg-linear-to-r from-transparent via-button-s to-transparent border-0 dark:via-white shrink-0;
   }
 
+  hr#Opocity {
+    @apply h-px w-full bg-linear-to-r from-transparent via-white to-transparent border-0 dark:via-button-s shrink-0;
+  }
+
   footer {
     @apply h-40 flex flex-row justify-between items-center w-full;
   }

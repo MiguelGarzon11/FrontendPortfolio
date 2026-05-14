@@ -6,7 +6,7 @@
   </div>
 
   <div class="flex flex-wrap px-5 sm:p-5 justify-center w-full">
-    <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center items-stretch justify-content-center">
+    <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-8 justify-center items-stretch justify-content-center">
       @for (tarjet of tarjets; track tarjet) {
         <app-tarjet [title]="tarjet.title" [icons]="tarjet.icons" [description]="tarjet.description" [iconTarjet]="tarjet.iconTarjet"></app-tarjet>
       }
@@ -18,7 +18,7 @@
       <div class="flex w-full gap-8 animate-scroll">
         @for (i of [1,2,3,4,5,6,7,8,9]; track i) { 
           @for (icon of icons; track icon) {
-            <svg class="w-12 h-12 md:w-13 md:h-13">
+            <svg class="w-12 h-12 md:w-13 md:h-13 text-secondary">
               <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
             </svg>
         } }
