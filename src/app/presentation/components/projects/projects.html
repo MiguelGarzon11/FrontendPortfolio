@@ -19,19 +19,24 @@ pb-24">
                 [title]="p.title"
                 [url]="p.url"
               ></app-card>
-            }
+            } 
           </div>
 
           <div class="w-[35%] flex flex-col items-start justify-center gap-7">
               <div class="flex flex-col gap-2">
                 <!-- Titulo -->
-                <h1 class="text-5xl text-start">{{p.title}}</h1>
+                 <div class="flex items-center gap-2.5">
+                    <svg class="size-13">
+                      <use href="/assets/icons/projects/vaultlyIcon.svg"></use>
+                    </svg>
+                   <h1 class="text-5xl text-start">{{p.title}}</h1>
+                 </div>
                 <!-- Tag -->
-                <p class="text-sm md:text-xl text-[#609efa] font-medium">{{ p.tag }}</p>
+                <p class="text-sm md:text-xl text-[#2478f7] dark:text-[#609efa] font-normal">{{ p.tag }}</p>
               </div>
 
               <!-- Description -->
-              <p class="text-sm md:text-[16px] text-secondary font-extralight">{{ p.description }}</p>
+              <p class="text-sm md:text-[16px] text-main dark:text-secondary font-extralight">{{ p.description }}</p>
 
               <!-- labels -->
                <div class="w-full flex flex-wrap gap-2">

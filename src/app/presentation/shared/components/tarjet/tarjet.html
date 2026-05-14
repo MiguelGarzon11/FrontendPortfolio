@@ -1,22 +1,31 @@
-<div
-  class="size-full lg:max-w-120 col-span-1 row-span-1 flex flex-col bg-button/20 dark:bg-back rounded-b-3xl rounded-t-2xl p-5 py-8 sm:p-10 justify-start gap-3.5 dark:shadow-[inset_4px_4px_12px_#0C0C0D,inset_-6px_-6px_12px_#232325] ring-1 ring-button-s/15 shadow-[inset_4px_4px_12px_#ABABB0,inset_-6px_-6px_12px_#C3C3C6]">
-  <h1 class="text-2xl text-button-s dark:text-button text-center text-nowrap font-mono font-semibold flex gap-x-5 justify-start items-center">
-    <div class="size-11 rounded-xl ring-1 p-2 dark:ring-secondary/10 ring-button-s/10">
-      <svg class="size-full text-button-s dark:text-secondary">
-        <use [attr.href]="`/assets/icons/tarjet/${iconTarjet}.svg`"></use>
+<!-- Tarjet Body-->
+<div class="size-full lg:max-w-120 col-span-1 row-span-1 flex flex-col bg-back dark:bg-back rounded-b-3xl rounded-t-2xl p-8 sm:p-10 justify-start gap-3 dark:shadow-[inset_4px_4px_12px_#0C0C0D,inset_-6px_-6px_12px_#232325] ring-1 ring-button-s/15 hover:bg-main transition-all duration-100 relative">
+  <!-- Boton -->
+  <div class="text-2xl text-button-s dark:text-button text-center text-nowrap font-mono font-semibold flex gap-x-5 justify-start items-center mb-2.5 sm:mb-5 relative" >
+    <div class="size-11 rounded-full ring-3 p-2 hover:cursor-pointer" [ngClass]="{'text-secondary shadow-[0_0_15px_rgba(34,211,238,0.8),inset_0_0_10px_rgba(34,211,238,0.5)]' : isPoweredOn, 'dark:ring-button-s/50 dark:text-button-s': !isPoweredOn}" (click)="isPoweredToggle()">
+      <svg class="size-full" [ngClass]="{'text-secondary' : isPoweredOn, 'dark:text-button-s': !isPoweredOn}">
+        <use [attr.href]="`/assets/icons/tarjet/${iconTarjet}.svg`"></use>   
       </svg>
     </div>
-    <p>{{ title }}</p>
-  </h1>
-  <p class="font-extralight text-sm dark:text-stone-200 text-stone-800">{{ description }}</p>
+    <p class="mt-2.5" [ngClass]="{'text-secondary' : isPoweredOn, 'dark:text-button': !isPoweredOn}">{{ title }}</p>
+    <p class="absolute top-14 text-[11px] left-1.25 font-medium " [ngClass]="{'text-secondary' : isPoweredOn, 'dark:text-button': !isPoweredOn}">POWER</p>
+  </div>
+  <!-- Description -->
+  <p class="font-extralight text-sm text-stone-200 mt-5">{{ description }}</p>
   <div class="flex flex-wrap w-full justify-center items-start gap-3 my-2">   
     @for (icon of icons; track icon) {
-      <svg class="w-12 h-12 sm:w-13 sm:h-13 hover:scale-105 hover:cursor-pointer transition-all duration-300">  
+      <svg class="w-12 h-12 sm:w-13 sm:h-13 hover:scale-105 hover:cursor-pointer transition-all duration-300 text-secondary">  
           <use [attr.href]="'/assets/icons/skills/' + icon + '.svg'"></use>
       </svg>
     }
   </div>
-  @if (title == 'Android' || title == 'Tools') {
-    <hr class="my-2 shrink-0">
+  <!-- Etiquetas -->
+  @if (title == 'Android' || title == 'Tools') {  
+    <hr id="Opocity" class="my-2 shrink-0">
   }
+  <!-- Bombillos -->
+  <div class="flex justify-center items-center gap-x-1 absolute size-auto top-12/13 left-1/2">
+    <div class="size-1.5 shadow-sm rounded-full shadow-white/80" [ngClass]="{'bg-red-900' : isPoweredOn, 'bg-red-500': !isPoweredOn}"></div>
+    <div class="size-1.5 shadow-sm rounded-full shadow-white/80" [ngClass]="{'bg-green-400' : isPoweredOn, 'bg-green-900': !isPoweredOn}"></div>
+  </div>
 </div>
