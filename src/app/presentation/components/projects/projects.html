@@ -8,18 +8,23 @@ pb-24">
         build functional and effective solutions.
       </p>
     </div>
-    <div class="flex flex-col justify-around items-center sm:items-center lg:flex-row gap-10 sm:w-full h-full mt-5">
+    <div class="flex flex-col justify-around items-center sm:items-center sm:w-full h-full mt-10 gap-y-20">
       <!-- Para cada proyecto -->
       @for (p of projects; track p) {
 
         <div class="flex flex-col md:flex-row w-full justify-center items-center gap-10">
-          <div class="w-[50%]">
-            @if (p.type == Platform.Web) {
-              <app-card
-                [title]="p.title"
-                [url]="p.url"
-              ></app-card>
-            } 
+          <div class="flex justify-center w-[50%]">
+            @if (p.type != null) {
+              @if (p.type == Platform.Web) {
+                <app-card
+                  [title]="p.title"
+                  [url]="p.url"
+                ></app-card>
+              } @else if (p.type == Platform.Android) {
+                <app-mobile-card
+                ></app-mobile-card>
+              } 
+            }
           </div>
 
           <div class="w-[35%] flex flex-col items-start justify-center gap-7">
